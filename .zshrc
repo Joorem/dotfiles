@@ -68,18 +68,26 @@ drill-color () {
 }
 
 ###################### Alias #######################
-alias c=clear
+alias c='clear'
 alias df='df -h -t ufs'
 alias drill='drill-color'
 alias grep="LC_ALL=C /usr/bin/grep --color=always"
+alias kk='ssh selenos.as30781.net'
 alias ll='ls -alh'
+alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+alias lol='~/Documents/Tools/nyancat/src/nyancat -n'
+alias meteo="curl http://wttr.in"
 alias s='su -'
 alias ssp='ssh -l jorem joworld.net'
 alias pfsi='pfctl -si'
 alias pfssh='pfctl -t ssh-bruteforce -T show'
-alias vi=vim
+alias uaFirefox='defaults write com.apple.Safari CustomUserAgent "\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11_0; rv:38.0) Gecko/20100101 Firefox/38.0\"" && killall Safari; sleep 2; open -a /Applications/Safari.app'
+alias uaSafari='defaults write com.apple.Safari CustomUserAgent "\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/601.1.56 (KHTML, like Gecko) Version/9.0 Safari/601.1.56\"" && killall Safari; sleep 2; open -a /Applications/Safari.app'
+alias vi='vim'
 alias vcurl='curl --silent --dump-header - -o /dev/null'
-alias kk="ssh selenos.as30781.net"
+alias view='vi -R'
+alias wup='sudo ifconfig en0 up'
+alias wdn='sudo ifconfig en0 down'
 
 ###################### Bindkeys #######################
 bindkey "^[[3~" delete-char		# Fn + Delete
