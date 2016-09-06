@@ -26,6 +26,12 @@ export CLICOLOR=1
 export EDITOR='vim'
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 export PATH="$PATH:/opt/local/bin"
+export LESS_TERMCAP_md=$'\e[1;36m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[1;40;92m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;32m'
 
 hash -d ports=/usr/ports
 hash -d src=/usr/src
