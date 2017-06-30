@@ -26,9 +26,38 @@ set splitright          " open new vertical split to the righ of the current one
 set autowrite           " automatically :write before running commands
 set number
 set numberwidth=4
+set autoread            " set to auto read when a file is changed from the outside
+set wildmenu            " turn on the Wild menu
+set encoding=utf8
+set ffs=unix,dos,mac
+set nobackup
+set nowb
+set noswapfile
 
 " display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Nerd Tree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDTreeWinPos = "left"
+let NERDTreeShowHidden=1
+let NERDTreeMapActivateNode='<space>'
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let g:NERDTreeWinSize=35
+map <leader>nt :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark<Space>
+map <leader>nf :NERDTreeFind<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Turn persistent undo on
+"    means that you can undo even when you close a buffer/VIM
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+try
+    set undodir=~/.vim_runtime/temp_dirs/undodir
+    set undofile
+catch
+endtry
 
 augroup vimrcEx
   autocmd!
@@ -49,6 +78,10 @@ augroup END
 
 let mapleader = ','
 nnoremap <Leader>r :RunInInteractiveShell<space>
+nmap <leader>a :w<cr>
+
+map <leader>pp :setlocal paste!<cr>
+map <leader>PP :setlocal nopaste!<cr>
 
 " get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
@@ -56,10 +89,14 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-j> <C-W><C-j>
+nnoremap <C-k> <C-W><C-k>
+nnoremap <C-l> <C-W><C-l>
+nnoremap <C-h> <C-W><C-h>
+
+" Visual mode pressing * searches for the current selection
+" Super useful! From an idea by Michael Naumann
+vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 
 let g:html_indent_tags = 'li\|p'
 
