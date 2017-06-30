@@ -1,5 +1,5 @@
 set autoindent
-set backspace=2                " set relaxed backspace style
+set backspace=2         " set relaxed backspace style
 set hlsearch            " highlight search
 set is                  " set incrementalsearch
 set ignorecase          " ignore case during searches
