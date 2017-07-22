@@ -13,7 +13,7 @@ cd ~/.vim/bundle
 [ ! -d vim-easy-align ] && git clone https://github.com/junegunn/vim-easy-align
 
 cd $OLDPWD
-for file in .vim/* .vimrc .zshrc; do
+for file in .vim/* .vimrc .zshenv .zshrc; do
     [ -d ~/$file ] && rm -r ~/$file;
     [ -f ~/$file ] && rm ~/$file;
 
