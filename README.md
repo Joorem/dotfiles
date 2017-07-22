@@ -5,7 +5,7 @@ I use Vim on a daily basis and tweak it regularly. This setup is inspired by [am
 
 ## Installation
 ```sh
-sh install.sh
+git clone git@github.com:Joorem/dotfiles.git && cd dotfiles && sh install.sh
 ```
 
 ## Plugins
