@@ -13,6 +13,7 @@ I use Vim on a daily basis and tweak it regularly. This setup is inspired by [am
 * [vim-easy-align][3]
 * [vim-pathogen][6]
 * [vim-plug][7]
+* [vim-syntastic][8]
 
 [1]:https://github.com/vim-airline/vim-airline
 [2]:https://github.com/scrooloose/nerdtree
@@ -21,3 +22,4 @@ I use Vim on a daily basis and tweak it regularly. This setup is inspired by [am
 [5]:https://github.com/amix/vimrc
 [6]:https://github.com/tpope/vim-pathogen
 [7]:https://github.com/junegunn/vim-plug
+[8]:https://github.com/vim-syntastic/syntastic
