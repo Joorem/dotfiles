@@ -64,6 +64,8 @@ map <leader>PP :setlocal nopaste!<cr>
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+execute pathogen#infect()
+
 " NERD Tree (https://github.com/scrooloose/nerdtree)
 let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=1
@@ -87,12 +89,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_enable_ruby_checker = 1
-
-" vim-easy-align (https://github.com/junegunn/vim-easy-align)
-execute pathogen#infect()
-call plug#begin('~/.vim/plugged')
-Plug 'junegunn/vim-easy-align'
-call plug#end()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
