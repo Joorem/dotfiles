@@ -1,5 +1,5 @@
 # VIM
-I use Vim on a daily basis and tweak it regularly. This setup is inspired by [amix][5] and use the theme [gruvbox][4].
+I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired by [amix][5] and use the theme [gruvbox][4].
 
 ![img](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-gruvbox.png)
 
@@ -22,3 +22,4 @@ git clone git@github.com:Joorem/dotfiles.git && cd dotfiles && sh install.sh
 [5]:https://github.com/amix/vimrc
 [6]:https://github.com/tpope/vim-pathogen
 [7]:https://github.com/vim-syntastic/syntastic
+[8]:https://vim.sourceforge.io
