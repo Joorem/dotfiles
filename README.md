@@ -9,8 +9,8 @@ git clone git@github.com:Joorem/dotfiles.git && cd dotfiles && sh install.sh
 ```
 
 ## Plugins
-* [vim-airline][1]
 * [NERD Tree][2]
+* [vim-airline][1]
 * [vim-easy-align][3]
 * [vim-pathogen][6]
 * [vim-syntastic][7]
