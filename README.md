@@ -1,5 +1,5 @@
 # VIM
-I use Vim on a daily basis and tweak it regulary. This setup is inspired by [amix][5].
+I use Vim on a daily basis and tweak it regularly. This setup is inspired by [amix][5].
 
 ## Screenshot
 ![img](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-gruvbox.png)
