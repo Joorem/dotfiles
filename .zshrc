@@ -123,7 +123,7 @@ function precmd {
     local user_color="${fg[cyan]}"
   fi
 
-  local user_at_host="%{${user_color}%}%n%{${fg[magenta]}%}@%{${fg[blue]}%}%M"
+  local user_at_host="%{${user_color}%}%n%{${fg[magenta]}%}@%{${fg[blue]}%}%m"
 
   PROMPT="${user_at_host} $(git_super_status)%f%~ > "
 }
