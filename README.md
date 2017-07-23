@@ -1,5 +1,5 @@
 # VIM
-I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired by [amix][5] and use the theme [gruvbox][4].
+I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired by [amix][5] and [Learn Vimscript the Hard Way][12]. I currently use the theme [gruvbox][4].
 
 ![img](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-gruvbox.png)
 
@@ -37,3 +37,4 @@ git clone git@github.com:Joorem/dotfiles.git && cd dotfiles && sh install.sh
 [9]:https://github.com/olivierverdier/zsh-git-prompt
 [10]:http://hg.nginx.org/nginx/raw-file/tip/contrib/vim/syntax/nginx.vim
 [11]:https://github.com/ctrlpvim/ctrlp.vim
+[12]:http://learnvimscriptthehardway.stevelosh.com
