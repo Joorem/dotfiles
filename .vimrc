@@ -66,6 +66,17 @@ map <leader>PP :setlocal nopaste!<cr>
 
 execute pathogen#infect()
 
+" ctrlp.vim (https://github.com/ctrlpvim/ctrlp.vim.git)
+map <leader>u :CtrlPMRU<cr>
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|png)$',
+  \ }
+
 " NERD Tree (https://github.com/scrooloose/nerdtree)
 let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=1

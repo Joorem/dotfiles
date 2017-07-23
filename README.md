@@ -9,6 +9,7 @@ I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired b
 * [vim-easy-align][3]
 * [vim-pathogen][6]
 * [vim-syntastic][7]
+* [ctrlp.vim][11]
 
 ## Syntax
 * [nginx][10]
@@ -35,3 +36,4 @@ git clone git@github.com:Joorem/dotfiles.git && cd dotfiles && sh install.sh
 [8]:https://vim.sourceforge.io
 [9]:https://github.com/olivierverdier/zsh-git-prompt
 [10]:http://hg.nginx.org/nginx/raw-file/tip/contrib/vim/syntax/nginx.vim
+[11]:https://github.com/ctrlpvim/ctrlp.vim

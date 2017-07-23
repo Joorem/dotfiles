@@ -12,6 +12,7 @@ cd ~/.vim/bundle
 [ ! -d nerdtree ] && git clone https://github.com/scrooloose/nerdtree.git
 [ ! -d syntastic ] && git clone --depth=1 https://github.com/vim-syntastic/syntastic
 [ ! -d vim-easy-align ] && git clone https://github.com/junegunn/vim-easy-align
+[ ! -d ctrlp.vim ] && git clone https://github.com/ctrlpvim/ctrlp.vim.git
 
 cd $OLDPWD
 for file in .vim/* .vimrc .zshenv .zshrc; do
