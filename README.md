@@ -10,6 +10,9 @@ I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired b
 * [vim-pathogen][6]
 * [vim-syntastic][7]
 
+## Syntax
+* [nginx][10]
+
 # Zsh
 ![img](https://github.com/Joorem/dotfiles/wiki/img/iterm-zsh-drill-color.png)
 ![img](https://github.com/Joorem/dotfiles/wiki/img/iterm-zsh-manpages-with-color.png)
@@ -31,3 +34,4 @@ git clone git@github.com:Joorem/dotfiles.git && cd dotfiles && sh install.sh
 [7]:https://github.com/vim-syntastic/syntastic
 [8]:https://vim.sourceforge.io
 [9]:https://github.com/olivierverdier/zsh-git-prompt
+[10]:http://hg.nginx.org/nginx/raw-file/tip/contrib/vim/syntax/nginx.vim
