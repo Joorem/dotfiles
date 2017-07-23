@@ -15,9 +15,6 @@ I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired b
 * [nginx][10]
 
 # Zsh
-![img](https://github.com/Joorem/dotfiles/wiki/img/iterm-zsh-drill-color.png)
-![img](https://github.com/Joorem/dotfiles/wiki/img/iterm-zsh-manpages-with-color.png)
-
 ## Plugins
 * [zsh-git-prompt][9]
 
