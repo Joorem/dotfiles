@@ -38,7 +38,7 @@ set nobackup
 set nowb
 set noswapfile
 
-let mapleader = ','
+let mapleader = ' '
 
 " Disable arrow keys
 nnoremap <Left>  :echoe "Use h"<cr>
@@ -46,7 +46,7 @@ nnoremap <Right> :echoe "Use l"<cr>
 nnoremap <Up>    :echoe "Use k"<cr>
 nnoremap <Down>  :echoe "Use j"<cr>
 
-" Navigate through panes with Ctrl+(h|j|k|l)
+" Navigate through windows with Ctrl+(h|j|k|l)
 nnoremap <C-h> <C-W><C-h>
 nnoremap <C-j> <C-W><C-j>
 nnoremap <C-k> <C-W><C-k>
@@ -58,6 +58,11 @@ vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 " Turn paste mode on/off
 map <leader>pp :setlocal paste!<cr>
 map <leader>PP :setlocal nopaste!<cr>
+
+" Buffers
+map <leader>bd :bdelete<cr>
+map <c-n> :bnext<cr>
+map <c-b> :bprevious<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
