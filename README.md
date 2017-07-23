@@ -1,7 +1,7 @@
+![img](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-manpage-dig-color.png)
+
 # VIM
 I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired by [amix][5] and [Learn Vimscript the Hard Way][12]. I currently use the theme [gruvbox][4].
-
-![img](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-gruvbox.png)
 
 ## Plugins
 * [NERD Tree][2]
