@@ -38,13 +38,18 @@ set nobackup
 set nowb
 set noswapfile
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Mapping
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let mapleader = ' '
 
 " Disable arrow keys
-nnoremap <Left>  :echoe "Use h"<cr>
-nnoremap <Right> :echoe "Use l"<cr>
-nnoremap <Up>    :echoe "Use k"<cr>
-nnoremap <Down>  :echoe "Use j"<cr>
+nnoremap <Left>  <nop>
+nnoremap <Right> <nop>
+nnoremap <Up>    <nop>
+nnoremap <Down>  <nop>
 
 " Navigate through windows with Ctrl+(h|j|k|l)
 nnoremap <C-h> <C-W><C-h>
@@ -56,14 +61,30 @@ nnoremap <C-l> <C-W><C-l>
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 
 " Turn paste mode on/off
-map <leader>pp :setlocal paste!<cr>
-map <leader>PP :setlocal nopaste!<cr>
+noremap <leader>pp :setlocal paste!<cr>
+noremap <leader>PP :setlocal nopaste!<cr>
 
 " Buffers
-map <leader>bd :bdelete<cr>
-map <c-n> :bnext<cr>
-map <c-b> :bprevious<cr>
+noremap <leader>d :bdelete<cr>
+noremap <c-n> :bnext<cr>
+noremap <c-b> :bprevious<cr>
 
+" Quit insert mode with Ctrl+d
+inoremap <c-d> <esc>
+
+" Write file with zz
+nnoremap zz :w<cr>
+
+" Open .vimrc with <space>+e and source it with <space>+s
+nnoremap <leader>e :vsplit $MYVIMRC<cr>
+nnoremap <leader>s :source $MYVIMRC<cr>
+
+" Surround the current word with " or '
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+
+" Modify parameters in parentheses, eg: dp (delete), cp (delete + insert mode)
+onoremap p i(
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
