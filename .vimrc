@@ -66,8 +66,8 @@ noremap <leader>PP :setlocal nopaste!<cr>
 
 " Buffers
 noremap <leader>d :bdelete<cr>
-noremap <c-n> :bnext<cr>
-noremap <c-b> :bprevious<cr>
+noremap <leader>n :bnext<cr>
+noremap <leader>b :bprevious<cr>
 
 " Quit insert mode with Ctrl+d
 inoremap <c-d> <esc>
