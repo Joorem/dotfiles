@@ -4,3 +4,16 @@
 [core]
     editor = vim
     pager = less -R
+[merge]
+    tool = vimdiff
+[alias]
+    co = checkout
+    cb = checkout -b
+    br = branch
+    ci = commit
+    st = status
+    lg = log --graph --oneline --decorate
+    lgg = log --graph --decorate
+    last = log -1 HEAD
+[push]
+    default = simple
