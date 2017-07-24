@@ -15,7 +15,7 @@ cd ~/.vim/bundle
 [ ! -d ctrlp.vim ] && git clone https://github.com/ctrlpvim/ctrlp.vim.git
 
 cd $OLDPWD
-for file in .vim/* .vimrc .zshenv .zshrc; do
+for file in .gitconfig .vim/* .vimrc .zshenv .zshrc; do
     [ -d ~/$file ] && rm -r ~/$file;
     [ -f ~/$file ] && rm ~/$file;
 
