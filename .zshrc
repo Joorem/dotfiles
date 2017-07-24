@@ -86,7 +86,7 @@ alias grep="LC_ALL=C /usr/bin/grep --color=always"
 alias kk='ssh selenos.as30781.net'
 alias ll='ls -alh'
 alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
-alias lol='/Users/jlegal/Documents/Tools/nyancat/src/nyancat -n'
+alias lol="$HOME/Documents/Tools/nyancat/src/nyancat -n"
 alias meteo="curl http://wttr.in"
 alias s='su -'
 alias k='ssh'
