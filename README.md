@@ -5,11 +5,12 @@ I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired b
 
 ## Plugins
 * [NERD Tree][2]
+* [ctrlp.vim][11]
 * [vim-airline][1]
+* [vim-bracketed-paste][13]
 * [vim-easy-align][3]
 * [vim-pathogen][6]
 * [vim-syntastic][7]
-* [ctrlp.vim][11]
 
 ## Syntax
 * [nginx][10]
@@ -35,3 +36,4 @@ git clone git@github.com:Joorem/dotfiles.git && cd dotfiles && sh install.sh
 [10]:http://hg.nginx.org/nginx/raw-file/tip/contrib/vim/syntax/nginx.vim
 [11]:https://github.com/ctrlpvim/ctrlp.vim
 [12]:http://learnvimscriptthehardway.stevelosh.com
+[13]:https://github.com/ConradIrwin/vim-bracketed-paste
