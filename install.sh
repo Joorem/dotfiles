@@ -5,6 +5,7 @@ set -u
 
 # Vim
 mkdir -p ~/.vim/bundle
+mkdir -p ~/.vim_runtime/temp_dirs/undodir
 
 cd ~/.vim/bundle
 [ ! -d gruvbox ] && git clone https://github.com/morhetz/gruvbox
