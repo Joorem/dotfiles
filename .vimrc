@@ -90,6 +90,44 @@ onoremap p i(
 xnoremap < <gv
 xnoremap > >gv
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Custom
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Colors
+syntax enable
+colorscheme gruvbox
+
+" Turn persistent undo on
+try
+    set undodir=~/.vim_runtime/temp_dirs/undodir
+    set undofile
+catch
+endtry
+
+" Display extra whitespace
+set list listchars=tab:»·,trail:·,nbsp:·
+
+augroup vimrcEx
+    autocmd!
+
+    " When editing a file, always jump to the last known cursor position.
+    " Don't do it for commit messages, when the position is invalid, or when
+    " inside an event handler (happens when dropping a file on gvim).
+    autocmd BufReadPost *
+        \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+            \   exe "normal g`\"" |
+        \ endif
+
+    " Set syntax highlighting for specific file types
+    autocmd BufRead,BufNewFile Appraisals set filetype=ruby
+    autocmd BufRead,BufNewFile *.md set filetype=markdown
+    autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
+    autocmd BufReadPost *.cnf set syntax=dosini
+augroup END
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -130,40 +168,3 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_enable_ruby_checker = 1
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Custom
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Colors
-syntax enable
-colorscheme gruvbox
-
-" Turn persistent undo on
-try
-    set undodir=~/.vim_runtime/temp_dirs/undodir
-    set undofile
-catch
-endtry
-
-" Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
-
-augroup vimrcEx
-    autocmd!
-
-    " When editing a file, always jump to the last known cursor position.
-    " Don't do it for commit messages, when the position is invalid, or when
-    " inside an event handler (happens when dropping a file on gvim).
-    autocmd BufReadPost *
-        \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-            \   exe "normal g`\"" |
-        \ endif
-
-    " Set syntax highlighting for specific file types
-    autocmd BufRead,BufNewFile Appraisals set filetype=ruby
-    autocmd BufRead,BufNewFile *.md set filetype=markdown
-    autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
-    autocmd BufReadPost *.cnf set syntax=dosini
-augroup END
