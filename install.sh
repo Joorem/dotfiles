@@ -8,12 +8,13 @@ mkdir -p ~/.vim/bundle
 mkdir -p ~/.vim_runtime/temp_dirs/undodir
 
 cd ~/.vim/bundle
+[ ! -d ctrlp.vim ] && git clone https://github.com/ctrlpvim/ctrlp.vim.git
 [ ! -d gruvbox ] && git clone https://github.com/morhetz/gruvbox
-[ ! -d vim-airline ] && git clone https://github.com/vim-airline/vim-airline
 [ ! -d nerdtree ] && git clone https://github.com/scrooloose/nerdtree.git
 [ ! -d syntastic ] && git clone --depth=1 https://github.com/vim-syntastic/syntastic
+[ ! -d vim-airline ] && git clone https://github.com/vim-airline/vim-airline
+[ ! -d vim-bracketed-paste ] && git clone https://github.com/ConradIrwin/vim-bracketed-paste
 [ ! -d vim-easy-align ] && git clone https://github.com/junegunn/vim-easy-align
-[ ! -d ctrlp.vim ] && git clone https://github.com/ctrlpvim/ctrlp.vim.git
 
 cd $OLDPWD
 for file in .gitconfig .vim/* .vimrc .zshenv .zshrc; do
