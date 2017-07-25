@@ -3,6 +3,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set autoindent
+set complete-=i                   " disable scanning included files
+set complete-=t                   " disable searching tags
 set cursorline
 set backspace=2                   " set relaxed backspace style
 set hlsearch                      " highlight search
@@ -67,8 +69,8 @@ noremap <leader>PP :setlocal nopaste!<cr>
 
 " Buffers
 noremap <leader>d :bdelete<cr>
-noremap <leader>n :bnext<cr>
-noremap <leader>b :bprevious<cr>
+noremap <c-l> :bNext<cr>
+noremap <c-h> :bprevious<cr>
 
 " Quit insert mode with Ctrl+d
 inoremap <c-d> <esc>
