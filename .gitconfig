@@ -1,19 +1,41 @@
 [user]
-    name = Jérôme Le Gal
-    email = jerome@joworld.net
+    name       = Jérôme Le Gal
+    email      = jerome@joworld.net
+    signingkey = BDB801BB1EE51EC1
+
 [core]
     editor = vim
-    pager = less -R
+    pager  = less -R
+
+[commit]
+    gpgsign = true
+
+[color]
+    branch      = auto
+    diff        = auto
+    interactive = auto
+    status      = auto
+    ui          = auto
+
+[diff]
+    tool      = vimdiff
+    algorithm = patience
+
+[fetch]
+    prune = true
+
 [merge]
     tool = vimdiff
-[alias]
-    co = checkout
-    cb = checkout -b
-    br = branch
-    ci = commit
-    st = status
-    lg = log --graph --oneline --decorate
-    lgg = log --graph --decorate
-    last = log -1 HEAD
+
 [push]
-    default = simple
+    default = current
+
+[alias]
+    co   = checkout
+    cb   = checkout -b
+    br   = branch
+    ci   = commit
+    st   = status
+    lg   = log --graph --oneline --decorate
+    lgg  = log --graph --decorate
+    last = log -1 HEAD
