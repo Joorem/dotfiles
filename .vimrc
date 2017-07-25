@@ -82,6 +82,14 @@ inoremap <c-d> <esc>
 " Write file with zz
 nnoremap zz :w<cr>
 
+" Move current line or visual-selection with Ctrl+Shift+(j|k)
+nnoremap <c-s-j> :move .+1<CR>==
+nnoremap <c-s-k> :move .-2<CR>==
+inoremap <c-s-j> <Esc>:move .+1<CR>==gi
+inoremap <c-s-k> <Esc>:move .-2<CR>==gi
+vnoremap <c-s-j> :move '>+1<CR>gv=gv
+vnoremap <c-s-k> :move '<-2<CR>gv=gv
+
 " Disable hlsearch when entering ISNERT mode
 autocmd InsertEnter * setlocal nohlsearch
 autocmd InsertLeave * setlocal hlsearch
@@ -111,8 +119,6 @@ xnoremap > >gv
 
 " Disable cursorline in INSERT mode
 autocmd InsertLeave,WinEnter * set cursorline
-
-
 
 " Turn persistent undo on
 try
