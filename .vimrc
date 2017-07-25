@@ -48,6 +48,10 @@ set noswapfile
 
 let mapleader = ' '
 
+" Make <c-p> and <c-n> behave like <up> and <down>: show new or previous results matching current command-line
+cnoremap <c-n> <down>
+cnoremap <c-p> <up>
+
 " Disable arrow keys
 nnoremap <Left>  <nop>
 nnoremap <Right> <nop>
