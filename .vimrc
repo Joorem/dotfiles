@@ -86,6 +86,9 @@ nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
 " Modify parameters in parentheses, eg: dp (delete), cp (delete + insert mode)
 onoremap p i(
 
+" Preserve visual selection when using < or >
+xnoremap < <gv
+xnoremap > >gv
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
