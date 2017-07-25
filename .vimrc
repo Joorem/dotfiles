@@ -3,6 +3,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set autoindent
+set cursorline
 set backspace=2                   " set relaxed backspace style
 set hlsearch                      " highlight search
 set is                            " set incrementalsearch
@@ -94,6 +95,9 @@ xnoremap > >gv
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Disable cursorline in INSERT mode
+autocmd InsertLeave,WinEnter * set cursorline
 
 " Turn persistent undo on
 try
