@@ -86,6 +86,9 @@ nnoremap <leader>s :source $MYVIMRC<cr>
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
 
+" Disable hlsearch until the next search
+nnoremap <esc><esc> :silent! nohls<cr>
+
 " Modify parameters in parentheses, eg: dp (delete), cp (delete + insert mode)
 onoremap p i(
 
