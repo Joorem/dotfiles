@@ -22,10 +22,10 @@ cd ~/.vim/bundle
 mkdir -p ~/.zsh
 [ ! -d ~/.zsh/zsh-git-prompt ] && git clone https://github.com/olivierverdier/zsh-git-prompt ~/.zsh/zsh-git-prompt
 
-cd $OLDPWD
+cd "$OLDPWD"
 for file in .gnupg/* .gitconfig .vim/* .vimrc .zshenv .zshrc; do
-    [ -d ~/$file ] && rm -r ~/$file;
-    [ -f ~/$file ] && rm ~/$file;
+    [ -d "$HOME/$file" ] && rm -r "${HOME:?}/$file";
+    [ -f "$HOME/$file" ] && rm "$HOME/$file";
 
-    ln -fs $PWD/$file ~/$file;
+    ln -fs "$PWD/$file" "$HOME/$file";
 done
