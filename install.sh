@@ -5,7 +5,6 @@ set -u
 
 # GPG
 mkdir -p ~/.gnupg
-ln -fs $PWD/.gnupg/gpg.conf ~/.gnupg/gpg.conf
 
 # Vim
 mkdir -p ~/.vim/bundle ~/.vim_runtime/temp_dirs/undodir
@@ -19,14 +18,14 @@ cd ~/.vim/bundle
 [ ! -d vim-bracketed-paste ] && git clone https://github.com/ConradIrwin/vim-bracketed-paste
 [ ! -d vim-easy-align ] && git clone https://github.com/junegunn/vim-easy-align
 
+# Zsh
+mkdir -p ~/.zsh
+[ ! -d ~/.zsh/zsh-git-prompt ] && git clone https://github.com/olivierverdier/zsh-git-prompt ~/.zsh/zsh-git-prompt
+
 cd $OLDPWD
-for file in .gitconfig .vim/* .vimrc .zshenv .zshrc; do
+for file in .gnupg/* .gitconfig .vim/* .vimrc .zshenv .zshrc; do
     [ -d ~/$file ] && rm -r ~/$file;
     [ -f ~/$file ] && rm ~/$file;
 
     ln -fs $PWD/$file ~/$file;
 done
-
-# Zsh
-mkdir -p ~/.zsh
-[ ! -d ~/.zsh/zsh-git-prompt ] && git clone https://github.com/olivierverdier/zsh-git-prompt ~/.zsh/zsh-git-prompt
