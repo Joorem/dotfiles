@@ -40,5 +40,5 @@
     ci   = commit
     st   = status
     lg   = log --graph --oneline --decorate
-    lgg  = log --graph --decorate
+    lgg  = log --graph --decorate --show-signature
     last = log -1 HEAD
