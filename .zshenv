@@ -1,6 +1,7 @@
 # Env
 export CLICOLOR=1
 export EDITOR='vim'
+export GPG_TTY=$(tty)
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US:en"
 export LC_PAPER="en_US.UTF-8"
