@@ -1,5 +1,6 @@
 ![img](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-manpage-dig-color.png)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/Joorem/dotfiles.svg?branch=master)](https://travis-ci.org/Joorem/dotfiles)
 
 # VIM
