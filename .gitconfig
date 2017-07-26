@@ -24,6 +24,9 @@
 [fetch]
     prune = true
 
+[gpg]
+    program = gpg2
+
 [merge]
     tool = vimdiff
 
