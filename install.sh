@@ -3,9 +3,12 @@
 set -e
 set -u
 
+# GPG
+mkdir -p ~/.gnupg
+ln -fs $PWD/.gnupg/gpg.conf ~/.gnupg/gpg.conf
+
 # Vim
-mkdir -p ~/.vim/bundle
-mkdir -p ~/.vim_runtime/temp_dirs/undodir
+mkdir -p ~/.vim/bundle ~/.vim_runtime/temp_dirs/undodir
 
 cd ~/.vim/bundle
 [ ! -d ctrlp.vim ] && git clone https://github.com/ctrlpvim/ctrlp.vim.git
