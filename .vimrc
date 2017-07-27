@@ -90,10 +90,6 @@ inoremap <c-s-k> <Esc>:move .-2<CR>==gi
 vnoremap <c-s-j> :move '>+1<CR>gv=gv
 vnoremap <c-s-k> :move '<-2<CR>gv=gv
 
-" Disable hlsearch when entering ISNERT mode
-autocmd InsertEnter * setlocal nohlsearch
-autocmd InsertLeave * setlocal hlsearch
-
 " Open .vimrc with <space>+e and source it with <space>+s
 nnoremap <leader>e :vsplit $MYVIMRC<cr>
 nnoremap <leader>s :source $MYVIMRC<cr>
@@ -119,6 +115,12 @@ xnoremap > >gv
 
 " Disable cursorline in INSERT mode
 autocmd InsertLeave,WinEnter * set cursorline
+autocmd InsertEnter * set nocursorline
+
+" Disable hlsearch when entering ISNERT mode
+autocmd InsertEnter * setlocal nohlsearch
+autocmd InsertLeave * setlocal hlsearch
+
 
 " Turn persistent undo on
 try
