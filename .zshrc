@@ -77,24 +77,18 @@ send-SSH-pubkey () {
 
 ###################### Alias #######################
 alias c=clear
-alias df='df -h -t ufs'
+alias df='df -h'
 alias dig=dig-color
-alias dnsReload='sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist'
-alias getDefaultPW='echo wlr2knFWuv4acr|xclip -selection primary'
 alias drill='drill-color'
-alias grep="LC_ALL=C /usr/bin/grep --color=always"
-alias kk='ssh selenos.as30781.net'
+alias grep="LC_ALL=C grep --color=always"
 alias ll='ls -alh'
-alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 alias lol="$HOME/Documents/Tools/nyancat/src/nyancat -n"
 alias meteo="curl http://wttr.in"
 alias s='su -'
-alias k='ssh'
 alias puppet-lint='puppet-lint --no-2sp_soft_tabs-check --no-80chars-check'
 alias ssp='ssh -l jorem eva.joworld.net'
 alias pfsi='pfctl -si'
 alias pfssh='pfctl -t ssh-bruteforce -T show'
-alias testssl='~/Documents/scripts/testssl.sh/testssl.sh'
 alias vi=vim
 alias vcurl='curl --silent --dump-header - -o /dev/null'
 alias view='vi -R'
