@@ -121,6 +121,15 @@ autocmd InsertEnter * set nocursorline
 autocmd InsertEnter * setlocal nohlsearch
 autocmd InsertLeave * setlocal hlsearch
 
+" Remove trailing whitespace
+function! StripWhitespace()
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    :%s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfunction
+noremap <leader>t :call StripWhitespace()<cr>
 
 " Turn persistent undo on
 try
