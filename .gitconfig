@@ -37,6 +37,7 @@
     default = current
 
 [alias]
+    aliases  = config --get-regexp alias
     co       = checkout
     cb       = checkout -b
     br       = branch
