@@ -42,6 +42,7 @@
     br       = branch
     ci       = commit
     st       = status
+    l        = log --graph --oneline --decorate --max-count=30
     lg       = log --graph --oneline --decorate
     lgg      = log --graph --decorate --show-signature
     last     = log -1 HEAD
