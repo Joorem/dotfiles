@@ -40,7 +40,7 @@
     co       = checkout
     cb       = checkout -b
     br       = branch
-    ci       = commit
+    ci       = commit -m
     st       = status
     l        = log --graph --oneline --decorate --max-count=30
     lg       = log --graph --oneline --decorate
