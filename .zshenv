@@ -21,4 +21,5 @@ export LESS_TERMCAP_us=$'\e[1;32m'
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 export PAGER='more'
 export PATH="$PATH:/Users/jlegal/admin:/opt/local/bin"
+export TERM=xterm-256color
 export TMUX_TMPDIR="$HOME/.tmux"
