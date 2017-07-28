@@ -81,6 +81,7 @@ alias df='df -h'
 alias dig=dig-color
 alias drill='drill-color'
 alias grep="LC_ALL=C grep --color=always"
+alias l='ls -lh'
 alias ll='ls -alh'
 alias lol="$HOME/Documents/Tools/nyancat/src/nyancat -n"
 alias meteo="curl http://wttr.in"
