@@ -37,6 +37,7 @@
     default = current
 
 [alias]
+    amend    = commit --amend
     aliases  = config --get-regexp alias
     co       = checkout
     cb       = checkout -b
