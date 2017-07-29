@@ -40,6 +40,7 @@ set ffs=unix,dos,mac
 set nobackup
 set nowb
 set noswapfile
+set switchbuf=usetab
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -73,8 +74,8 @@ noremap <leader>PP :setlocal nopaste!<cr>
 
 " Buffers
 noremap <leader>d :bdelete<cr>
-noremap <leader>l :bNext<cr>
-noremap <leader>h :bprevious<cr>
+noremap <leader>l :sbNext<cr>
+noremap <leader>h :sbprevious<cr>
 
 " Quit insert mode with Ctrl+d
 inoremap <c-d> <esc>
