@@ -49,4 +49,5 @@
     lg       = log --graph --oneline --decorate
     lgg      = log --graph --decorate --show-signature
     last     = log -1 HEAD
+    sl       = stash list
     uncommit = reset HEAD^
