@@ -36,6 +36,9 @@
 [push]
     default = current
 
+[status]
+    showUntrackedFiles = all
+
 [alias]
     amend    = commit --amend
     aliases  = config --get-regexp alias
