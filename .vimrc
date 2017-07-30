@@ -168,7 +168,15 @@ augroup END
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vim-easy-align'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'morhetz/gruvbox'
+Plug 'vim-syntastic/syntastic'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'vim-airline/vim-airline'
+call plug#end()
 
 " ctrlp.vim (https://github.com/ctrlpvim/ctrlp.vim.git)
 map <leader>u :CtrlPMRU<cr>
