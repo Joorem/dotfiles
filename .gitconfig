@@ -45,7 +45,7 @@
     ci       = commit -m
     d        = diff
     st       = status
-    l        = log --graph --oneline --decorate --max-count=30
+    l        = log --graph --pretty=format:'%C(auto)%h %C(auto)%s%C(auto)%d' --max-count=30
     lg       = log --graph --oneline --decorate
     lgg      = log --graph --decorate --show-signature
     last     = log -1 HEAD
