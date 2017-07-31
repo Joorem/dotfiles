@@ -12,7 +12,6 @@ set hlsearch                      " highlight search
 set is                            " set incrementalsearch
 set ignorecase                    " ignore case during searches
 set laststatus=2                  " always show status line
-set lazyredraw
 set novisualbell
 set ruler                         " always show cursor position
 set showcmd                       " display incomplete commands
@@ -30,6 +29,7 @@ set visualbell t_vb=              " turn off error beep/flash
 set background=dark
 set timeoutlen=1000 ttimeoutlen=0 " no delay when pressing escape key
 set formatoptions-=cro
+set regexpengine=1                " speedup refresh with cursorline enabled
 set splitbelow                    " open new horizontal split below the current one
 set splitright                    " open new vertical split to the righ of the current one
 set autowrite                     " automatically :write before running commands
