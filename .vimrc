@@ -219,6 +219,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_enable_ruby_checker = 1
 
+" gruvbox theme
+let g:gruvbox_contrast_dark = 'medium'
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors
