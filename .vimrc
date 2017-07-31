@@ -12,6 +12,7 @@ set hlsearch                      " highlight search
 set is                            " set incrementalsearch
 set ignorecase                    " ignore case during searches
 set laststatus=2                  " always show status line
+set lazyredraw
 set novisualbell
 set ruler                         " always show cursor position
 set showcmd                       " display incomplete commands
