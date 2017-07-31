@@ -9,6 +9,7 @@ I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired b
 ## Plugins
 * [ALE][15]
 * [NERD Tree][2]
+* [SuperTab][16]
 * [ctrlp.vim][11]
 * [vim-airline][1]
 * [vim-bracketed-paste][13]
@@ -42,3 +43,4 @@ git clone git@github.com:Joorem/dotfiles.git && cd dotfiles && sh install.sh && 
 [13]:https://github.com/ConradIrwin/vim-bracketed-paste
 [14]:https://github.com/rodjek/vim-puppet
 [15]:https://github.com/w0rp/ale
+[16]:https://github.com/ervandew/supertab
