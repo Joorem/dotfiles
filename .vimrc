@@ -80,6 +80,10 @@ noremap <leader>h :sbprevious<cr>
 " Quit insert mode with Ctrl+d
 inoremap <c-d> <esc>
 
+" Go to the begining or the end of a line with Ctrl+(a|e) in INSERT mode
+inoremap <c-a> <c-o>0
+inoremap <c-e> <c-o>$
+
 " Write file with zz
 nnoremap zz :w<cr>
 
