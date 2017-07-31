@@ -180,6 +180,7 @@ Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'vim-airline/vim-airline'
+Plug 'rodjek/vim-puppet'
 call plug#end()
 
 " ctrlp.vim (https://github.com/ctrlpvim/ctrlp.vim.git)
