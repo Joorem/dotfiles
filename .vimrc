@@ -3,6 +3,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set autoindent
+set autoread                      " reload files changed outside vim
 set complete-=i                   " disable scanning included files
 set complete-=t                   " disable searching tags
 set cursorline
