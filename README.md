@@ -13,7 +13,7 @@ I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired b
 * [vim-airline][1]
 * [vim-bracketed-paste][13]
 * [vim-easy-align][3]
-* [vim-pathogen][6]
+* [vim-plug][6]
 * [vim-puppet][14]
 
 ## Syntax
@@ -33,7 +33,7 @@ git clone git@github.com:Joorem/dotfiles.git && cd dotfiles && sh install.sh && 
 [3]:https://github.com/junegunn/vim-easy-align
 [4]:https://github.com/morhetz/gruvbox
 [5]:https://github.com/amix/vimrc
-[6]:https://github.com/tpope/vim-pathogen
+[6]:https://github.com/junegunn/vim-plug
 [8]:https://vim.sourceforge.io
 [9]:https://github.com/olivierverdier/zsh-git-prompt
 [10]:http://hg.nginx.org/nginx/raw-file/tip/contrib/vim/syntax/nginx.vim
