@@ -2,6 +2,8 @@
 " Options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set nocompatible
+
 set autoindent
 set autoread                      " reload files changed outside vim
 set complete-=i                   " disable scanning included files
@@ -63,10 +65,10 @@ nnoremap <Up>    <nop>
 nnoremap <Down>  <nop>
 
 " Navigate through windows with Ctrl+(h|j|k|l)
-nnoremap <C-h> <C-W><C-h>
-nnoremap <C-j> <C-W><C-j>
-nnoremap <C-k> <C-W><C-k>
-nnoremap <C-l> <C-W><C-l>
+nnoremap <C-j> <C-W>j
+nnoremap <C-h> <C-W>h
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
 
 " Search for the current selected word with *
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
@@ -91,12 +93,12 @@ inoremap <c-e> <c-o>$
 nnoremap zz :w<cr>
 
 " Move current line or visual-selection with Ctrl+Shift+(j|k)
-nnoremap <c-s-j> :move .+1<CR>==
-nnoremap <c-s-k> :move .-2<CR>==
-inoremap <c-s-j> <Esc>:move .+1<CR>==gi
-inoremap <c-s-k> <Esc>:move .-2<CR>==gi
-vnoremap <c-s-j> :move '>+1<CR>gv=gv
-vnoremap <c-s-k> :move '<-2<CR>gv=gv
+"nnoremap <c-s-j> :move .+1<CR>==
+"nnoremap <c-s-k> :move .-2<CR>==
+"inoremap <c-s-j> <Esc>:move .+1<CR>==gi
+"inoremap <c-s-k> <Esc>:move .-2<CR>==gi
+"vnoremap <c-s-j> :move '>+1<CR>gv=gv
+"vnoremap <c-s-k> :move '<-2<CR>gv=gv
 
 " Open .vimrc with <space>+e and source it with <space>+s
 nnoremap <leader>e :vsplit $MYVIMRC<cr>
