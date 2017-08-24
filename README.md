@@ -26,7 +26,7 @@ I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired b
 
 # Installation
 ```sh
-git clone git@github.com:Joorem/dotfiles.git && cd dotfiles && sh install.sh && vim -c "PlugInstall"
+git clone https://github.com/Joorem/dotfiles.git && cd dotfiles && sh install.sh && vim -c "PlugInstall"
 ```
 
 [1]:https://github.com/vim-airline/vim-airline
