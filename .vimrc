@@ -85,8 +85,8 @@ noremap <leader>h :sbprevious<cr>
 " Windows size
 nnoremap f <C-W>=
 nnoremap F <C-W>_<C-W>\|
-nnoremap < :vertical resize -10<cr>
-nnoremap > :vertical resize +10<cr>
+"nnoremap < :vertical resize -10<cr>
+"nnoremap > :vertical resize +10<cr>
 nnoremap - :resize -5<cr>
 nnoremap + :resize +5<cr>
 
