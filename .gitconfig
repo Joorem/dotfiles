@@ -44,6 +44,7 @@
     aliases  = config --get-regexp alias
     co       = checkout
     cb       = checkout -b
+    bd       = branch -d
     br       = branch
     ci       = commit -m
     d        = diff
@@ -54,3 +55,4 @@
     last     = log -1 HEAD
     sl       = stash list
     uncommit = reset HEAD^
+    unstage  = reset --
