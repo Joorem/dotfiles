@@ -50,6 +50,7 @@
     d        = diff
     st       = status
     l        = log --graph --pretty=format:'%C(auto)%h %C(auto)%s%C(auto)%d' --max-count=30
+    lb       = log --graph --pretty=format:'%C(auto)%h %C(auto)%s%C(auto)%d' master..HEAD
     lg       = log --graph --oneline --decorate
     lgg      = log --graph --decorate --show-signature
     last     = log -1 HEAD
