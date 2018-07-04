@@ -4,6 +4,7 @@ HISTSIZE=2000
 SAVEHIST=1000
 setopt append_history hist_ignore_all_dups hist_reduce_blanks
 setopt autocd
+setopt interactivecomments
 setopt nocheckjobs
 setopt nohup
 unsetopt beep
