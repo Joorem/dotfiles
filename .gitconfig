@@ -42,6 +42,7 @@
 [alias]
     amend    = commit --amend
     aliases  = config --get-regexp alias
+    ca       = commit -a
     co       = checkout
     cb       = checkout -b
     bd       = branch -d
