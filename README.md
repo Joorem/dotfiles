@@ -20,6 +20,7 @@ I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired b
 ## Syntax
 * [nginx][10]
 * [haproxy][17]
+* [jinja][18]
 
 # Zsh
 ## Plugins
@@ -46,3 +47,4 @@ git clone https://github.com/Joorem/dotfiles.git && cd dotfiles && sh install.sh
 [15]:https://github.com/w0rp/ale
 [16]:https://github.com/ervandew/supertab
 [17]:https://github.com/haproxy/haproxy/blob/master/examples/haproxy.vim
+[18]:https://www.vim.org/scripts/script.php?script_id=1856
