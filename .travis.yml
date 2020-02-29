@@ -8,4 +8,4 @@ before_install:
     - sudo apt-get -t trusty-backports install shellcheck
 
 script:
-- shellcheck install.sh
+- shellcheck -x install.sh
