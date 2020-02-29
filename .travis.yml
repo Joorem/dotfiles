@@ -1,11 +1,9 @@
 language: bash
 sudo: required
-dist: trusty
+dist: bionic
 
 before_install:
-    - sudo apt-add-repository "deb http://archive.ubuntu.com/ubuntu trusty-backports universe"
-    - sudo apt-get -qq update
-    - sudo apt-get -t trusty-backports install shellcheck
+    - sudo apt-get install shellcheck
 
 script:
 - shellcheck -x install.sh
