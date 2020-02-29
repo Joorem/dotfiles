@@ -21,3 +21,7 @@ for file in .gnupg/* .gitconfig .vim/* .vimrc .zshenv .zshrc; do
 
     ln -fs "$PWD/$file" "$HOME/$file";
 done
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    . install-macos.sh
+fi
