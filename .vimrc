@@ -3,6 +3,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible
+scriptencoding utf-8
 
 set autoindent
 set autoread                      " reload files changed outside vim
@@ -32,9 +33,11 @@ set visualbell t_vb=              " turn off error beep/flash
 set background=dark
 set timeoutlen=1000 ttimeoutlen=0 " no delay when pressing escape key
 set formatoptions-=cro
+set smartcase                     " override the 'ignorecase' option if the search pattern contains uppercase characters
 set regexpengine=1                " speedup refresh with cursorline enabled
 set splitbelow                    " open new horizontal split below the current one
 set splitright                    " open new vertical split to the righ of the current one
+set scrolloff=5                   " minimal number of screen lines to keep above and below the cursor
 set autowrite                     " automatically :write before running commands
 set number
 set numberwidth=4
@@ -46,13 +49,16 @@ set nobackup
 set nowb
 set noswapfile
 set switchbuf=usetab
+set showtabline=0                 " do not show the tabline (already shown with vim-airline plugin)
+set noshowmode
+set smarttab
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let mapleader = ' '
+let g:mapleader = ' '
 
 " Make <c-p> and <c-n> behave like <up> and <down>: show new or previous results matching current command-line
 cnoremap <c-n> <down>
@@ -91,7 +97,9 @@ nnoremap - :resize -5<cr>
 nnoremap + :resize +5<cr>
 
 " Quit insert mode with Ctrl+d
-inoremap <c-d> <esc>
+inoremap <c-d> <Esc>
+inoremap ;; <Esc>
+
 
 " Go to the begining or the end of a line with Ctrl+(a|e) in INSERT mode
 inoremap <c-a> <c-o>0
@@ -186,19 +194,33 @@ augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
-Plug 'junegunn/vim-easy-align'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'morhetz/gruvbox'
-Plug 'w0rp/ale'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'vim-airline/vim-airline'
-Plug 'rodjek/vim-puppet'
+Plug 'Raimondi/delimitMate'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ervandew/supertab'
+Plug 'jreybert/vimagit'
+Plug 'junegunn/vim-easy-align'
+Plug 'majutsushi/tagbar'
+Plug 'mhinz/vim-signify'
+Plug 'mbbill/undotree'
+Plug 'morhetz/gruvbox'
+Plug 'pearofducks/ansible-vim'
+Plug 'rodjek/vim-puppet'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'syngan/vim-vimlint'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-repeat'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-jp/vim-vimlparser'
+Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 call plug#end()
 
 " ctrlp.vim (https://github.com/ctrlpvim/ctrlp.vim.git)
-map <leader>u :CtrlPMRU<cr>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
@@ -209,22 +231,54 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " NERD Tree (https://github.com/scrooloose/nerdtree)
+" open NERDTree with Vim
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+" open NERDTree even if no file is specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" exit Vim if NERDTree is the last window opened
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeMinimalUI = 1
 let g:NERDTreeWinPos = "left"
-let NERDTreeShowHidden=1
-let NERDTreeMapActivateNode='<space>'
-let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let g:NERDTreeShowHidden=1
+let g:NERDTreeMapActivateNode='<space>'
+let g:NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
 map <leader>nt :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
 
 " vim-airline (https://github.com/vim-airline/vim-airline)
-let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='gruvbox'
+let g:airline_highlighting_cache = 1
 
-" gruvbox theme
+" gruvbox theme (https://github.com/morhetz/gruvbox)
 let g:gruvbox_contrast_dark = 'medium'
 
+" syntastic (https://github.com/vim-syntastic/syntastic)
+let g:syntastic_enable_perl_checker = 1
+let g:syntastic_perl_checkers = ['perl']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
+" tagbar (https://github.com/majutsushi/tagbar)
+" Open Tagbar with Vim
+autocmd VimEnter * TagbarToggle
+
+" undotree (https://github.com/mbbill/undotree)
+map <leader>uu :UndotreeToggle<cr>
+let g:undotree_WindowLayout = 3
+let g:undotree_DiffpanelHeight = 40
+let g:undotree_SetFocusWhenToggle = 1
+
+" vimagit (https://github.com/jreybert/vimagit)
+map <C-g> :Magit<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
