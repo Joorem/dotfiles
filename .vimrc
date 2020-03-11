@@ -21,14 +21,12 @@ set ruler                         " always show cursor position
 set showcmd                       " display incomplete commands
 set sm                            " set showmatch
 set smartindent
-set shiftwidth=4                  " set spaces for autoindent
-set tabstop=4                     " set spaces for tab
+set shiftwidth=2                  " set spaces for autoindent
+set tabstop=2                     " set spaces for tab
 set expandtab                     " use spaces for tab
 set shiftround
 set textwidth=65000
 set title                         " show title in console title bar
-set ttyfast                       " smoother changes
-set ttyscroll=0                   " turn off scrolling (did not work well with putty)
 set visualbell t_vb=              " turn off error beep/flash
 set background=dark
 set timeoutlen=1000 ttimeoutlen=0 " no delay when pressing escape key
@@ -46,7 +44,7 @@ set wildmenu                      " turn on the Wild menu
 set encoding=utf8
 set ffs=unix,dos,mac
 set nobackup
-set nowb
+set nowritebackup
 set noswapfile
 set switchbuf=usetab
 set showtabline=0                 " do not show the tabline (already shown with vim-airline plugin)
@@ -98,8 +96,7 @@ nnoremap + :resize +5<cr>
 
 " Quit insert mode with Ctrl+d
 inoremap <c-d> <Esc>
-inoremap ;; <Esc>
-
+inoremap jk <Esc>
 
 " Go to the begining or the end of a line with Ctrl+(a|e) in INSERT mode
 inoremap <c-a> <c-o>0
@@ -197,6 +194,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'Raimondi/delimitMate'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'cespare/vim-toml'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ervandew/supertab'
 Plug 'jreybert/vimagit'
@@ -210,6 +208,7 @@ Plug 'rodjek/vim-puppet'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'syngan/vim-vimlint'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
@@ -218,13 +217,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-jp/vim-vimlparser'
 Plug 'vim-syntastic/syntastic'
 Plug 'w0rp/ale'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " ctrlp.vim (https://github.com/ctrlpvim/ctrlp.vim.git)
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll|png)$',
@@ -252,6 +252,7 @@ map <leader>nf :NERDTreeFind<cr>
 " vim-airline (https://github.com/vim-airline/vim-airline)
 let g:airline_theme='gruvbox'
 let g:airline_highlighting_cache = 1
+let g:airline_powerline_fonts = 1
 
 " gruvbox theme (https://github.com/morhetz/gruvbox)
 let g:gruvbox_contrast_dark = 'medium'

@@ -7,11 +7,17 @@
 
 I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired by [amix][5] and [Learn Vimscript the Hard Way][12]. I currently use the theme [gruvbox][4].
 
+## Dependencies
+
+* [nerd-fonts][33]
+* [shellcheck][34]
+
 ## Plugins
 
 * [ALE][15]
 * [ansible-vim][25]
 * [NERD Tree][2]
+* [NERD Syntax Highlight][36]
 * [NERD Tree Git plugin][20]
 * [SuperTab][16]
 * [ctrlp.vim][11]
@@ -23,6 +29,7 @@ I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired b
 * [vim-airline][1]
 * [vim-bracketed-paste][13]
 * [vim-commentary][28]
+* [vim-devicons][37]
 * [vim-easy-align][3]
 * [vim-fugitive][29]
 * [vim-git][30]
@@ -30,6 +37,7 @@ I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired b
 * [vim-puppet][14]
 * [vim-repeat][30]
 * [vim-signify][23]
+* [vim-toml][35]
 * [vim-vimlint][27]
 * [vim-vimlparser][31]
 * [vimagit][21]
@@ -86,3 +94,8 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [30]:https://github.com/tpope/vim-repeat
 [31]:https://github.com/vim-jp/vim-vimlparser
 [32]:https://github.com/vim-syntastic/syntastic
+[33]:https://github.com/ryanoasis/nerd-fonts
+[34]:https://github.com/koalaman/shellcheck
+[35]:https://github.com/cespare/vim-toml
+[36]:https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
+[37]:https://github.com/ryanoasis/vim-devicons
