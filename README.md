@@ -1,21 +1,32 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/Joorem/dotfiles.svg?branch=master)](https://travis-ci.org/Joorem/dotfiles)
 
-# VIM
+# $TERM
+
+I spend a lot of time in my terminal and as a Mac user I use [iTerm2][29]. I cannot imagine living without all the functionalities it offers: clever bindings, Tmux integration, a large amount of settings, etc..
+
+* **Theme**: [gruvbox][40]
+* **Font**: [Anonymice Nerd Font Mono][41] (a recompilation of [Anonymous Pro][42] which I need for `vim-devicons`)
+
+# $SHELL
+
+I used ZSH for years but since I tried [fish][43] I try to slowly migrate to it and find my way. Since I'm still testing it and tweaking its configuration files there is no configuration in this repository (yet).
+
+# $EDITOR
 
 I use [Vim][8] on a daily basis and tweak it regularly. This setup is partially inspired by [amix][5] and [Learn Vimscript the Hard Way][12]. I currently use the theme [gruvbox][4].
 
 Here is a screenshot of what it looks like:
 
-![img](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-gruvbox.png)
+![iTerm & Vim screenshot](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-gruvbox.png)
 
 ## Dependencies
 Some of the plugins I currently use need externals programs to work correctly.
 
-* [ctags][39] (needed by **Tagbar**)
-* [mardownlint][38] (needed by **syntastic**)
-* [nerd-fonts][33] (needed by **vim-devicons**)
-* [shellcheck][34] (needed by **syntastic**)
+* [ctags][39] (needed by `Tagbar`)
+* [mardownlint][38] (needed by `syntastic`)
+* [nerd-fonts][33] (needed by `vim-devicons`)
+* [shellcheck][34] (needed by `syntastic`)
 
 ## Plugins
 
@@ -54,13 +65,9 @@ Some of the plugins I currently use need externals programs to work correctly.
 * [haproxy][17]
 * [jinja][18]
 
-# Zsh
-
-## Plugins
-
-* [zsh-git-prompt][9]
-
 # Installation
+
+If you want to test my configuration just run the following command, it will create symbolic links between your `$HOME` directory and the needed files (.vimrc, etc.):
 
 ```sh
 git clone https://github.com/Joorem/dotfiles.git && \
@@ -96,6 +103,7 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [26]:https://github.com/rust-lang/rust.vim
 [27]:https://github.com/syngan/vim-vimlint
 [28]:https://github.com/tpope/vim-commentary
+[29]:https://www.iterm2.com
 [30]:https://github.com/tpope/vim-repeat
 [31]:https://github.com/vim-jp/vim-vimlparser
 [32]:https://github.com/vim-syntastic/syntastic
@@ -106,3 +114,7 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [37]:https://github.com/ryanoasis/vim-devicons
 [38]:https://github.com/markdownlint/markdownlint
 [39]:https://github.com/universal-ctags/ctags
+[40]:https://github.com/morhetz/gruvbox-contrib/tree/master/iterm2
+[41]:https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/AnonymousPro/complete/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf
+[42]:https://www.marksimonson.com/fonts/view/anonymous-pro
+[43]:https://fishshell.com
