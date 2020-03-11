@@ -1,46 +1,52 @@
-![img](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-manpage-dig-color.png)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/Joorem/dotfiles.svg?branch=master)](https://travis-ci.org/Joorem/dotfiles)
 
 # VIM
 
-I use [Vim][8] on a daily basis and tweak it regularly. This setup is inspired by [amix][5] and [Learn Vimscript the Hard Way][12]. I currently use the theme [gruvbox][4].
+I use [Vim][8] on a daily basis and tweak it regularly. This setup is partially inspired by [amix][5] and [Learn Vimscript the Hard Way][12]. I currently use the theme [gruvbox][4].
+
+Here is a screenshot of what it looks like:
+
+![img](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-gruvbox.png)
 
 ## Dependencies
+Some of the plugins I currently use need externals programs to work correctly.
 
-* [nerd-fonts][33]
-* [shellcheck][34]
+* [ctags][39] (needed by **Tagbar**)
+* [mardownlint][38] (needed by **syntastic**)
+* [nerd-fonts][33] (needed by **vim-devicons**)
+* [shellcheck][34] (needed by **syntastic**)
 
 ## Plugins
 
-* [ALE][15]
-* [ansible-vim][25]
-* [NERD Tree][2]
-* [NERD Syntax Highlight][36]
-* [NERD Tree Git plugin][20]
-* [SuperTab][16]
-* [ctrlp.vim][11]
-* [delimitMate][19]
-* [rust.vim][26]
-* [syntastic][32]
-* [Tagbar][22]
-* [Undotree][24]
-* [vim-airline][1]
-* [vim-bracketed-paste][13]
-* [vim-commentary][28]
-* [vim-devicons][37]
-* [vim-easy-align][3]
-* [vim-fugitive][29]
-* [vim-git][30]
-* [vim-plug][6]
-* [vim-puppet][14]
-* [vim-repeat][30]
-* [vim-signify][23]
-* [vim-toml][35]
-* [vim-vimlint][27]
-* [vim-vimlparser][31]
-* [vimagit][21]
+| Plugin                      | Description                                      |
+| --------------------------- | ------------------------------------------------ |
+| [ALE][15]                   | Check syntax in Vim asynchronously and fix files |
+| [ansible-vim][25]           | Syntax highlighting for Ansible                  |
+| [NERD Tree][2]              | A Tree explorer                                  |
+| [NERD Syntax Highlight][36] | Syntax and highlight for NERD Tree               |
+| [NERD Tree Git plugin][20]  | Git status in NERD Tree                          |
+| [SuperTab][16]              | Vim insert mode completions                      |
+| [ctrlp.vim][11]             | Fuzzy file, buffer, mru, tag, finder             |
+| [delimitMate][19]           | Automatic closing of "", (), {}, etc             |
+| [rust.vim][26]              | Syntax & Syntastic integration for rust          |
+| [syntastic][32]             | Syntax checking                                  |
+| [Tagbar][22]                | Displays tags in a window, ordered by scope      |
+| [Undotree][24]              | Undo history visualizer                          |
+| [vim-airline][1]            | Lean & mean status/tabline                       |
+| [vim-bracketed-paste][13]   | Handles bracketed-paste-mode                     |
+| [vim-commentary][28]        | Comment stuff out                                |
+| [vim-devicons][37]          | Adds file type icons to Vim plugins              |
+| [vim-easy-align][3]         | Alignment plugin                                 |
+| [vim-git][30]               | Vim Git runtime files                            |
+| [vim-plug][6]               | Minimalist Vim Plugin Manager                    |
+| [vim-puppet][14]            | Syntax, formatting, ctags, for Puppet            |
+| [vim-repeat][30]            | Enable repeating supported plugin maps with "."  |
+| [vim-signify][23]           | Show a VCS diff using Vim                        |
+| [vim-toml][35]              | Syntax for TOML                                  |
+| [vim-vimlint][27]           | Lint for vim script                              |
+| [vim-vimlparser][31]        | Vim script parser                                |
+| [vimagit][21]               | Ease your git workflow within Vim                |
 
 ## Syntax
 
@@ -90,7 +96,6 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [26]:https://github.com/rust-lang/rust.vim
 [27]:https://github.com/syngan/vim-vimlint
 [28]:https://github.com/tpope/vim-commentary
-[29]:https://github.com/tpope/vim-fugitive
 [30]:https://github.com/tpope/vim-repeat
 [31]:https://github.com/vim-jp/vim-vimlparser
 [32]:https://github.com/vim-syntastic/syntastic
@@ -99,3 +104,5 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [35]:https://github.com/cespare/vim-toml
 [36]:https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
 [37]:https://github.com/ryanoasis/vim-devicons
+[38]:https://github.com/markdownlint/markdownlint
+[39]:https://github.com/universal-ctags/ctags
