@@ -95,12 +95,15 @@ nnoremap - :resize -5<cr>
 nnoremap + :resize +5<cr>
 
 " Quit insert mode with Ctrl+d
-inoremap <c-d> <Esc>
+inoremap <C-d> <Esc>
 inoremap jk <Esc>
 
+" Quit Vim with 'q' (like more/less)
+nnoremap q :q<cr>
+
 " Go to the begining or the end of a line with Ctrl+(a|e) in INSERT mode
-inoremap <c-a> <c-o>0
-inoremap <c-e> <c-o>$
+inoremap <C-a> <c-o>0
+inoremap <C-e> <c-o>$
 
 " Write file with zz
 nnoremap zz :w<cr>
@@ -210,7 +213,6 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'syngan/vim-vimlint'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-repeat'
 Plug 'vim-airline/vim-airline'
@@ -220,7 +222,9 @@ Plug 'w0rp/ale'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
+"
 " ctrlp.vim (https://github.com/ctrlpvim/ctrlp.vim.git)
+"
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_show_hidden = 1
@@ -230,7 +234,9 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|png)$',
   \ }
 
+"
 " NERD Tree (https://github.com/scrooloose/nerdtree)
+"
 " open NERDTree with Vim
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
@@ -249,15 +255,21 @@ map <leader>nt :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
 
+"
 " vim-airline (https://github.com/vim-airline/vim-airline)
+"
 let g:airline_theme='gruvbox'
 let g:airline_highlighting_cache = 1
 let g:airline_powerline_fonts = 1
 
+"
 " gruvbox theme (https://github.com/morhetz/gruvbox)
+"
 let g:gruvbox_contrast_dark = 'medium'
 
+"
 " syntastic (https://github.com/vim-syntastic/syntastic)
+"
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = ['perl']
 set statusline+=%#warningmsg#
@@ -265,21 +277,33 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 2
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0 " syntastic slows down everything when opening big files
 let g:syntastic_check_on_wq = 0
 
+"
 " tagbar (https://github.com/majutsushi/tagbar)
-" Open Tagbar with Vim
-autocmd VimEnter * TagbarToggle
+"
+map <C-t> :TagbarToggle<cr>
 
+
+"
 " undotree (https://github.com/mbbill/undotree)
+"
 map <leader>uu :UndotreeToggle<cr>
 let g:undotree_WindowLayout = 3
 let g:undotree_DiffpanelHeight = 40
 let g:undotree_SetFocusWhenToggle = 1
 
+"
 " vimagit (https://github.com/jreybert/vimagit)
+"
 map <C-g> :Magit<cr>
+
+"
+" vim-devicons (https://github.com/ryanoasis/vim-devicons)
+"
+let g:WebDevIconsOS = 'Darwin' " See https://github.com/ryanoasis/vim-devicons/pull/135
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
