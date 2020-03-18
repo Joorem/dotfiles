@@ -10,7 +10,7 @@ I spend a lot of time in my terminal and as a Mac user I use [iTerm2][29]. I can
 
 # $SHELL
 
-I used ZSH for years but since I tried [fish][43] I try to slowly migrate to it and find my way. Since I'm still testing it and tweaking its configuration files there is no configuration in this repository (yet).
+I used ZSH for years but since I tried [fish][43] I try to slowly migrate to it and find my way. The configuration present in this repository is quite simple for now and I will slowly tweak it.
 
 # $EDITOR
 
@@ -49,6 +49,7 @@ Some of the plugins I currently use need externals programs to work correctly.
 | [vim-commentary][28]        | Comment stuff out                                |
 | [vim-devicons][37]          | Adds file type icons to Vim plugins              |
 | [vim-easy-align][3]         | Alignment plugin                                 |
+| [vim-fish][44]              | Vim support for editing fish scripts             |
 | [vim-git][30]               | Vim Git runtime files                            |
 | [vim-plug][6]               | Minimalist Vim Plugin Manager                    |
 | [vim-puppet][14]            | Syntax, formatting, ctags, for Puppet            |
@@ -70,7 +71,7 @@ Some of the plugins I currently use need externals programs to work correctly.
 If you want to test my configuration just run the following command, it will create symbolic links between your `$HOME` directory and the needed files (.vimrc, etc.):
 
 ```sh
-git clone https://github.com/Joorem/dotfiles.git && \
+git clone --quiet https://github.com/Joorem/dotfiles.git && \
 cd dotfiles && \
 sh install.sh && \
 vim -E -s -u ~/.vimrc +PlugInstall +qall
@@ -118,3 +119,4 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [41]:https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/AnonymousPro/complete/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf
 [42]:https://www.marksimonson.com/fonts/view/anonymous-pro
 [43]:https://fishshell.com
+[44]:https://github.com/dag/vim-fish
