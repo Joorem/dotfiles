@@ -5,51 +5,73 @@
 set nocompatible
 scriptencoding utf-8
 
-set autoindent
+"
+" Files
+"
 set autoread                      " reload files changed outside vim
-set complete-=i                   " disable scanning included files
-set complete-=t                   " disable searching tags
-set cursorline
-set backspace=2                   " set relaxed backspace style
-set hlsearch                      " highlight search
-set is                            " set incrementalsearch
-set ignorecase                    " ignore case during searches
+set autowrite                     " automatically :write before running commands
+set encoding=utf8
+set fileformats=unix,dos,mac      " EOL to use
+set nobackup                      " do not backup modified files
+set noswapfile                    " do not use a swapfile for the buffer
+set nowritebackup
+
+"
+" Indentation
+"
+set autoindent                    " copy indent from current line when starting a new line
+set copyindent                    " copy the structure of the existing lines indent when autoindenting a new line
+set expandtab                     " use spaces for tab
+set smartindent                   " do smart autoindenting when starting a new line
+set shiftround                    " round indent to multiple of 'shiftwidth'
+set shiftwidth=2                  " number of spaces to use for each step of (auto)indent
+set smarttab                      " inserts blanks according to 'shiftwidth'
+set softtabstop=2                 " number of spaces that a <Tab> counts for
+set tabstop=2                     " set spaces for tab
+
+"
+" Input
+"
+set textwidth=0
+set formatoptions-=c              " automatic formatting configuration"
+set switchbuf=usetab
+
+"
+" Interface
+"
+set background=dark
+set cursorline                    " highlight the screen line of the cursor
 set laststatus=2                  " always show status line
 set lazyredraw
-set novisualbell
+set noshowmode
+set number                        " print the line number in front of each line
+set numberwidth=4                 " minimal number of columns to use for the line number
+set regexpengine=1                " speedup refresh with cursorline enabled
 set ruler                         " always show cursor position
 set showcmd                       " display incomplete commands
-set sm                            " set showmatch
-set smartindent
-set shiftwidth=2                  " set spaces for autoindent
-set tabstop=2                     " set spaces for tab
-set expandtab                     " use spaces for tab
-set shiftround
-set textwidth=65000
-set title                         " show title in console title bar
-set visualbell t_vb=              " turn off error beep/flash
-set background=dark
-set timeoutlen=1000 ttimeoutlen=0 " no delay when pressing escape key
-set formatoptions-=cro
-set smartcase                     " override the 'ignorecase' option if the search pattern contains uppercase characters
-set regexpengine=1                " speedup refresh with cursorline enabled
+set showmatch
+set showtabline=0                 " do not show the tabline (already shown with vim-airline plugin)
+set scrolloff=5                   " minimal number of screen lines to keep above and below the cursor
 set splitbelow                    " open new horizontal split below the current one
 set splitright                    " open new vertical split to the righ of the current one
-set scrolloff=5                   " minimal number of screen lines to keep above and below the cursor
-set autowrite                     " automatically :write before running commands
-set number
-set numberwidth=4
-set autoread                      " set to auto read when a file is changed from the outside
+set visualbell t_vb=              " turn off error beep/flash
 set wildmenu                      " turn on the Wild menu
-set encoding=utf8
-set ffs=unix,dos,mac
-set nobackup
-set nowritebackup
-set noswapfile
-set switchbuf=usetab
-set showtabline=0                 " do not show the tabline (already shown with vim-airline plugin)
-set noshowmode
-set smarttab
+
+"
+" Keyboard
+"
+set backspace=2                   " set relaxed backspace style
+set timeoutlen=1000 ttimeoutlen=0 " no delay when pressing escape key
+
+"
+" Search
+"
+set complete-=i                   " disable scanning included files
+set complete-=t                   " disable searching tags
+set hlsearch                      " highlight search
+set ignorecase                    " ignore case during searches
+set incsearch                     " set incrementalsearch
+set smartcase                     " override the 'ignorecase' option if the search pattern contains uppercase characters
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
