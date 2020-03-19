@@ -20,6 +20,7 @@ set -g theme_show_exit_status no
 # Alias
 ###############################################################
 
+alias aria2c="aria2c --conf-path=$HOME/.config/aria2c/aria2.conf"
 alias c=clear
 alias df='df -h'
 alias dig=dig-color

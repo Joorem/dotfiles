@@ -18,7 +18,9 @@ URL_ZSH_GITPROMPT='https://github.com/olivierverdier/zsh-git-prompt'
 #
 # Prerequisites
 #
-mkdir -p ~/.gnupg \
+mkdir -p \
+  ~/.config/aria2c \
+  ~/.gnupg \
   ~/.vim_runtime/temp_dirs/undodir \
   ~/.zsh
 
@@ -29,7 +31,9 @@ mkdir -p ~/.gnupg \
 #
 # Symlinks
 #
-for file in .config/fish/* \
+for file in \
+  .config/aria2c/* \
+  .config/fish/* \
   .gnupg/* \
   .gitconfig \
   .vim/* \
