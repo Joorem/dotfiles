@@ -216,34 +216,51 @@ augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
-Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'Raimondi/delimitMate'
+
+" UI
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'cespare/vim-toml'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'dag/vim-fish'
 Plug 'ervandew/supertab'
 Plug 'jreybert/vimagit'
-Plug 'junegunn/vim-easy-align'
-Plug 'majutsushi/tagbar'
+Plug 'lifepillar/vim-gruvbox8'
+Plug 'lilydjwg/colorizer'
 Plug 'mhinz/vim-signify'
-Plug 'mbbill/undotree'
 Plug 'morhetz/gruvbox'
+Plug 'psliwka/vim-smoothie'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'vim-airline/vim-airline'
+Plug 'ryanoasis/vim-devicons'
+
+" Filetype & Syntax
+Plug 'cespare/vim-toml'
+Plug 'dag/vim-fish'
 Plug 'pearofducks/ansible-vim'
 Plug 'rodjek/vim-puppet'
 Plug 'rust-lang/rust.vim'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'syngan/vim-vimlint'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-git'
-Plug 'tpope/vim-repeat'
-Plug 'vim-airline/vim-airline'
 Plug 'vim-jp/vim-vimlparser'
+
+" Utility
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'Raimondi/delimitMate'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'majutsushi/tagbar'
+Plug 'mbbill/undotree'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-git'
 Plug 'vim-syntastic/syntastic'
 Plug 'w0rp/ale'
-Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
+
+filetype plugin indent on
+
+"
+" colorizer (https://github/lilydjwg/colorizer)
+"
+map <leader>c :ColorToggle<cr>
 
 "
 " ctrlp.vim (https://github.com/ctrlpvim/ctrlp.vim.git)
@@ -333,4 +350,4 @@ let g:WebDevIconsOS = 'Darwin' " See https://github.com/ryanoasis/vim-devicons/p
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax enable
-colorscheme gruvbox
+colorscheme gruvbox8

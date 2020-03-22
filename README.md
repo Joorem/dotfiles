@@ -14,16 +14,18 @@ I used ZSH for years but since I tried [fish][43] I try to slowly migrate to it 
 
 # $EDITOR
 
-I use [Vim][8] on a daily basis and tweak it regularly. This setup is partially inspired by [amix][5] and [Learn Vimscript the Hard Way][12]. I currently use the theme [gruvbox][4].
+I use [Vim][8] on a daily basis and tweak it regularly. This setup is partially inspired by [amix][5] and [Learn Vimscript the Hard Way][12]. I currently use the theme [gruvbox8][45].
 
 Here is a screenshot of what it looks like:
 
 ![iTerm & Vim screenshot](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-gruvbox.png)
 
 ## Dependencies
+
 Some of the plugins I currently use need externals programs to work correctly.
 
 * [ctags][39] (needed by `Tagbar`)
+* [git][48] (needed by `vim-signify` & `vimagit`)
 * [mardownlint][38] (needed by `syntastic`)
 * [nerd-fonts][33] (needed by `vim-devicons`)
 * [shellcheck][34] (needed by `syntastic`)
@@ -46,15 +48,18 @@ Some of the plugins I currently use need externals programs to work correctly.
 | [Undotree][24]              | Undo history visualizer                          |
 | [vim-airline][1]            | Lean & mean status/tabline                       |
 | [vim-bracketed-paste][13]   | Handles bracketed-paste-mode                     |
+| [vim-colorizer][47]         | Colorize all text in the form #rrggbb or #rgb    |
 | [vim-commentary][28]        | Comment stuff out                                |
 | [vim-devicons][37]          | Adds file type icons to Vim plugins              |
 | [vim-easy-align][3]         | Alignment plugin                                 |
 | [vim-fish][44]              | Vim support for editing fish scripts             |
 | [vim-git][30]               | Vim Git runtime files                            |
+| [vim-gruvbox8][45]          | Simplified and optimized Gruvbox colorscheme     |
 | [vim-plug][6]               | Minimalist Vim Plugin Manager                    |
 | [vim-puppet][14]            | Syntax, formatting, ctags, for Puppet            |
 | [vim-repeat][30]            | Enable repeating supported plugin maps with "."  |
 | [vim-signify][23]           | Show a VCS diff using Vim                        |
+| [vim-smoothie][46]          | Smooth scrolling for Vim                         |
 | [vim-toml][35]              | Syntax for TOML                                  |
 | [vim-vimlint][27]           | Lint for vim script                              |
 | [vim-vimlparser][31]        | Vim script parser                                |
@@ -120,3 +125,7 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [42]:https://www.marksimonson.com/fonts/view/anonymous-pro
 [43]:https://fishshell.com
 [44]:https://github.com/dag/vim-fish
+[45]:https://github.com/lifepillar/vim-gruvbox8
+[46]:https://github.com/psliwka/vim-smoothie
+[47]:https://github.com/lilydjwg/colorizer
+[48]:https://git-scm.com
