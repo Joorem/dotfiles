@@ -33,7 +33,8 @@ mkdir -p \
 #
 for file in \
   .config/aria2c/* \
-  .config/fish/* \
+  .config/fish/config.fish \
+  .config/fish/functions/* \
   .gnupg/* \
   .gitconfig \
   .vim/* \

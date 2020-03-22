@@ -23,9 +23,6 @@ set -g theme_show_exit_status no
 alias aria2c="aria2c --conf-path=$HOME/.config/aria2c/aria2.conf"
 alias c=clear
 alias df='df -h'
-alias dig=dig-color
-alias drill='drill-color'
-alias grep="LC_ALL=C grep --color=always"
 alias l='ls -lh'
 alias ll='ls -alh'
 alias meteo="curl http://wttr.in"
