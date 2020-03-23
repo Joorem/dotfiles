@@ -29,6 +29,7 @@ Some of the plugins I currently use need externals programs to work correctly.
 * [mardownlint][38] (needed by `syntastic`)
 * [nerd-fonts][33] (needed by `vim-devicons`)
 * [shellcheck][34] (needed by `syntastic`)
+* [pynvim][49] (needed by `LeaderF`)
 
 ## Plugins
 
@@ -36,11 +37,11 @@ Some of the plugins I currently use need externals programs to work correctly.
 | --------------------------- | ------------------------------------------------ |
 | [ALE][15]                   | Check syntax in Vim asynchronously and fix files |
 | [ansible-vim][25]           | Syntax highlighting for Ansible                  |
+| [LeaderF][11]               | Efficient fuzzy finder                           |
 | [NERD Tree][2]              | A Tree explorer                                  |
 | [NERD Syntax Highlight][36] | Syntax and highlight for NERD Tree               |
 | [NERD Tree Git plugin][20]  | Git status in NERD Tree                          |
 | [SuperTab][16]              | Vim insert mode completions                      |
-| [ctrlp.vim][11]             | Fuzzy file, buffer, mru, tag, finder             |
 | [delimitMate][19]           | Automatic closing of "", (), {}, etc             |
 | [rust.vim][26]              | Syntax & Syntastic integration for rust          |
 | [Tagbar][22]                | Displays tags in a window, ordered by scope      |
@@ -90,7 +91,7 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [8]:https://vim.sourceforge.io
 [9]:https://github.com/olivierverdier/zsh-git-prompt
 [10]:http://hg.nginx.org/nginx/raw-file/tip/contrib/vim/syntax/nginx.vim
-[11]:https://github.com/ctrlpvim/ctrlp.vim
+[11]:https://github.com/Yggdroot/LeaderF
 [12]:http://learnvimscriptthehardway.stevelosh.com
 [13]:https://github.com/ConradIrwin/vim-bracketed-paste
 [14]:https://github.com/rodjek/vim-puppet
@@ -127,3 +128,4 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [46]:https://github.com/psliwka/vim-smoothie
 [47]:https://github.com/lilydjwg/colorizer
 [48]:https://git-scm.com
+[49]:https://github.com/neovim/neovim/wiki/FAQ#python-support-isnt-working

@@ -168,7 +168,7 @@ xnoremap > >gv
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter * set nocursorline
 
-" Disable hlsearch when entering ISNERT mode
+" Disable hlsearch when entering INSERT mode
 autocmd InsertEnter * setlocal nohlsearch
 autocmd InsertLeave * setlocal hlsearch
 
@@ -224,7 +224,6 @@ Plug 'jreybert/vimagit'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'lilydjwg/colorizer'
 Plug 'mhinz/vim-signify'
-Plug 'morhetz/gruvbox'
 Plug 'psliwka/vim-smoothie'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -243,7 +242,7 @@ Plug 'vim-jp/vim-vimlparser'
 " Utility
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'Raimondi/delimitMate'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
 Plug 'mbbill/undotree'
@@ -269,16 +268,16 @@ let g:ale_sh_shellcheck_options = '-x'
 map <leader>c :ColorToggle<cr>
 
 "
-" ctrlp.vim (https://github.com/ctrlpvim/ctrlp.vim.git)
+" LeaderF (https://github.com/Yggdroot/LeaderF)
 "
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_working_path_mode = 'r'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll|png)$',
-  \ }
+let g:Lf_CommandMap = {'<C-]>': ['<C-V>'],}
+let g:Lf_PreviewInPopup = 1
+let g:Lf_StlColorscheme = 'gruvbox_material'
+let g:Lf_WildIgnore = {
+  \ 'dir': ['.svn','.git','.hg'],
+  \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+  \}
+let g:Lf_WindowPosition = 'popup'
 
 "
 " NERD Tree (https://github.com/scrooloose/nerdtree)
@@ -304,14 +303,9 @@ map <leader>nf :NERDTreeFind<cr>
 "
 " vim-airline (https://github.com/vim-airline/vim-airline)
 "
-let g:airline_theme='gruvbox'
+let g:airline_theme='gruvbox8'
 let g:airline_highlighting_cache = 1
 let g:airline_powerline_fonts = 1
-
-"
-" gruvbox theme (https://github.com/morhetz/gruvbox)
-"
-let g:gruvbox_contrast_dark = 'medium'
 
 "
 " tagbar (https://github.com/majutsushi/tagbar)
