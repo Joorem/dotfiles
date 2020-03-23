@@ -43,7 +43,6 @@ Some of the plugins I currently use need externals programs to work correctly.
 | [ctrlp.vim][11]             | Fuzzy file, buffer, mru, tag, finder             |
 | [delimitMate][19]           | Automatic closing of "", (), {}, etc             |
 | [rust.vim][26]              | Syntax & Syntastic integration for rust          |
-| [syntastic][32]             | Syntax checking                                  |
 | [Tagbar][22]                | Displays tags in a window, ordered by scope      |
 | [Undotree][24]              | Undo history visualizer                          |
 | [vim-airline][1]            | Lean & mean status/tabline                       |
@@ -112,7 +111,6 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [29]:https://www.iterm2.com
 [30]:https://github.com/tpope/vim-repeat
 [31]:https://github.com/vim-jp/vim-vimlparser
-[32]:https://github.com/vim-syntastic/syntastic
 [33]:https://github.com/ryanoasis/nerd-fonts
 [34]:https://github.com/koalaman/shellcheck
 [35]:https://github.com/cespare/vim-toml

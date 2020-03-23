@@ -250,12 +250,18 @@ Plug 'mbbill/undotree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-git'
-Plug 'vim-syntastic/syntastic'
 Plug 'w0rp/ale'
 
 call plug#end()
 
 filetype plugin indent on
+
+"
+" Ale
+"
+let g:airline#extensions#ale#enabled = 1
+let g:ale_markdown_mdl_options = '--rules ~MD013'
+let g:ale_sh_shellcheck_options = '-x'
 
 "
 " colorizer (https://github/lilydjwg/colorizer)
@@ -306,20 +312,6 @@ let g:airline_powerline_fonts = 1
 " gruvbox theme (https://github.com/morhetz/gruvbox)
 "
 let g:gruvbox_contrast_dark = 'medium'
-
-"
-" syntastic (https://github.com/vim-syntastic/syntastic)
-"
-let g:syntastic_enable_perl_checker = 1
-let g:syntastic_perl_checkers = ['perl']
-let g:syntastic_sh_shellcheck_args = "-x"
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 2
-let g:syntastic_check_on_open = 0 " syntastic slows down everything when opening big files
-let g:syntastic_check_on_wq = 0
 
 "
 " tagbar (https://github.com/majutsushi/tagbar)
