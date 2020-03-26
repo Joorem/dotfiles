@@ -37,11 +37,12 @@ Some of the plugins I currently use need externals programs to work correctly.
 | --------------------------- | ------------------------------------------------ |
 | [ALE][15]                   | Check syntax in Vim asynchronously and fix files |
 | [ansible-vim][25]           | Syntax highlighting for Ansible                  |
+| [coc.vim][vim-coc]          | Intellisense engine for Vim8 & Neovim            |
 | [LeaderF][11]               | Efficient fuzzy finder                           |
 | [NERD Tree][2]              | A Tree explorer                                  |
 | [NERD Syntax Highlight][36] | Syntax and highlight for NERD Tree               |
 | [NERD Tree Git plugin][20]  | Git status in NERD Tree                          |
-| [SuperTab][16]              | Vim insert mode completions                      |
+| [nginx.vim][nginx]          | Syntax for nginx files                           |
 | [delimitMate][19]           | Automatic closing of "", (), {}, etc             |
 | [rust.vim][26]              | Syntax & Syntastic integration for rust          |
 | [Tagbar][22]                | Displays tags in a window, ordered by scope      |
@@ -55,6 +56,7 @@ Some of the plugins I currently use need externals programs to work correctly.
 | [vim-fish][44]              | Vim support for editing fish scripts             |
 | [vim-git][30]               | Vim Git runtime files                            |
 | [vim-gruvbox8][45]          | Simplified and optimized Gruvbox colorscheme     |
+| [vim-haproxy][vim-haproxy]  | Syntax and highlighting for HAProxy              |
 | [vim-plug][6]               | Minimalist Vim Plugin Manager                    |
 | [vim-puppet][14]            | Syntax, formatting, ctags, for Puppet            |
 | [vim-repeat][30]            | Enable repeating supported plugin maps with "."  |
@@ -67,8 +69,6 @@ Some of the plugins I currently use need externals programs to work correctly.
 
 ## Syntax
 
-* [nginx][10]
-* [haproxy][17]
 * [jinja][18]
 
 # Installation
@@ -96,7 +96,6 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [13]:https://github.com/ConradIrwin/vim-bracketed-paste
 [14]:https://github.com/rodjek/vim-puppet
 [15]:https://github.com/w0rp/ale
-[16]:https://github.com/ervandew/supertab
 [17]:https://github.com/haproxy/haproxy/blob/master/contrib/syntax-highlight/haproxy.vim
 [18]:https://www.vim.org/scripts/script.php?script_id=1856
 [19]:https://github.com/Raimondi/delimitMate
@@ -129,3 +128,6 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [47]:https://github.com/lilydjwg/colorizer
 [48]:https://git-scm.com
 [49]:https://github.com/neovim/neovim/wiki/FAQ#python-support-isnt-working
+[nginx]:https://github.com/chr4/nginx.vim
+[vim-coc]:https://github.com/neoclide/coc.nvim
+[vim-haproxy]:https://github.com/Joorem/vim-haproxy

@@ -48,6 +48,7 @@ set number                        " print the line number in front of each line
 set numberwidth=4                 " minimal number of columns to use for the line number
 set regexpengine=1                " speedup refresh with cursorline enabled
 set ruler                         " always show cursor position
+set signcolumn=yes                " always show the signcolumn
 set showcmd                       " display incomplete commands
 set showmatch
 set showtabline=0                 " do not show the tabline (already shown with vim-airline plugin)
@@ -73,6 +74,9 @@ set ignorecase                    " ignore case during searches
 set incsearch                     " set incrementalsearch
 set smartcase                     " override the 'ignorecase' option if the search pattern contains uppercase characters
 
+if &shell =~# 'fish$'
+  set shell=sh
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mapping
@@ -141,6 +145,9 @@ nnoremap zz :w<cr>
 " Open .vimrc with <space>+e and source it with <space>+s
 nnoremap <leader>e :vsplit $MYVIMRC<cr>
 nnoremap <leader>s :source $MYVIMRC<cr>
+
+" Reload file with Ctrl+e (quite usefull when developing a syntax file)
+nnoremap <C-e> :e<cr>
 
 " Surround the current word with " or '
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
@@ -219,7 +226,6 @@ call plug#begin('~/.vim/plugged')
 
 " UI
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ervandew/supertab'
 Plug 'jreybert/vimagit'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'lilydjwg/colorizer'
@@ -231,7 +237,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 
 " Filetype & Syntax
+" Plug 'Joorem/vim-haproxy'
+Plug '~/Documents/git/vim-haproxy'
 Plug 'cespare/vim-toml'
+Plug 'chr4/nginx.vim'
 Plug 'dag/vim-fish'
 Plug 'pearofducks/ansible-vim'
 Plug 'rodjek/vim-puppet'
@@ -246,6 +255,7 @@ Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
 Plug 'mbbill/undotree'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-git'
@@ -256,10 +266,25 @@ call plug#end()
 filetype plugin indent on
 
 "
+" Coc.vim
+"
+let g:airline#extensions#coc#enabled = 1
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" use K to open documentation
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+"
 " Ale
 "
 let g:airline#extensions#ale#enabled = 1
-let g:ale_markdown_mdl_options = '--rules ~MD013'
 let g:ale_sh_shellcheck_options = '-x'
 
 "
