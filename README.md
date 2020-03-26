@@ -12,6 +12,10 @@ I spend a lot of time in my terminal and as a Mac user I use [iTerm2][29]. I can
 
 I used ZSH for years but since I tried [fish][43] I try to slowly migrate to it and find my way. The configuration present in this repository is quite simple for now and I will slowly tweak it.
 
+## External programs
+
+* [bat][bat] (replacement for `cat`)
+
 # $EDITOR
 
 I use [Vim][8] on a daily basis and tweak it regularly. This setup is partially inspired by [amix][5] and [Learn Vimscript the Hard Way][12]. I currently use the theme [gruvbox8][45].
@@ -128,6 +132,7 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [47]:https://github.com/lilydjwg/colorizer
 [48]:https://git-scm.com
 [49]:https://github.com/neovim/neovim/wiki/FAQ#python-support-isnt-working
+[bat]:https://github.com/sharkdp/bat
 [nginx]:https://github.com/chr4/nginx.vim
 [vim-coc]:https://github.com/neoclide/coc.nvim
 [vim-haproxy]:https://github.com/Joorem/vim-haproxy
