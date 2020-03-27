@@ -2,7 +2,7 @@
 " Options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set nocompatible
+set encoding=utf8
 scriptencoding utf-8
 
 "
@@ -10,7 +10,6 @@ scriptencoding utf-8
 "
 set autoread                      " reload files changed outside vim
 set autowrite                     " automatically :write before running commands
-set encoding=utf8
 set fileformats=unix,dos,mac      " EOL to use
 set nobackup                      " do not backup modified files
 set noswapfile                    " do not use a swapfile for the buffer
@@ -172,20 +171,24 @@ xnoremap > >gv
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Disable cursorline in INSERT mode
-autocmd InsertLeave,WinEnter * set cursorline
-autocmd InsertEnter * set nocursorline
+augroup insert_no_cursorline
+    autocmd!
+  autocmd InsertLeave,WinEnter * set cursorline
+  autocmd InsertEnter * set nocursorline
+augroup END
 
 " Disable hlsearch when entering INSERT mode
-autocmd InsertEnter * setlocal nohlsearch
-autocmd InsertLeave * setlocal hlsearch
+augroup insert_no_hlsearch
+    autocmd!
+  autocmd InsertEnter * setlocal nohlsearch
+  autocmd InsertLeave * setlocal hlsearch
+augroup END
 
 " Remove trailing whitespace
 function! StripWhitespace()
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    :%s/\s\+$//e
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
 endfunction
 noremap <leader>t :call StripWhitespace()<cr>
 
@@ -307,16 +310,23 @@ let g:Lf_WindowPosition = 'popup'
 "
 " NERD Tree (https://github.com/scrooloose/nerdtree)
 "
-" open NERDTree with Vim
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-" open NERDTree even if no file is specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" exit Vim if NERDTree is the last window opened
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+augroup nerdtree
+  autocmd!
+
+  " open NERDTree with Vim
+  autocmd VimEnter * NERDTree
+  autocmd VimEnter * wincmd p
+
+  " open NERDTree even if no file is specified
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+  " exit Vim if NERDTree is the last window opened
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+augroup END
+
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeWinPos = "left"
+let g:NERDTreeWinPos = 'left'
 let g:NERDTreeShowHidden=1
 let g:NERDTreeMapActivateNode='<space>'
 let g:NERDTreeIgnore = ['\.pyc$', '__pycache__']
