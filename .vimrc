@@ -114,8 +114,6 @@ noremap <leader>h :sbprevious<cr>
 " Windows size
 nnoremap f <C-W>=
 nnoremap F <C-W>_<C-W>\|
-"nnoremap < :vertical resize -10<cr>
-"nnoremap > :vertical resize +10<cr>
 nnoremap - :resize -5<cr>
 nnoremap + :resize +5<cr>
 
@@ -132,14 +130,6 @@ inoremap <C-e> <c-o>$
 
 " Write file with zz
 nnoremap zz :w<cr>
-
-" Move current line or visual-selection with Ctrl+Shift+(j|k)
-"nnoremap <c-s-j> :move .+1<CR>==
-"nnoremap <c-s-k> :move .-2<CR>==
-"inoremap <c-s-j> <Esc>:move .+1<CR>==gi
-"inoremap <c-s-k> <Esc>:move .-2<CR>==gi
-"vnoremap <c-s-j> :move '>+1<CR>gv=gv
-"vnoremap <c-s-k> :move '<-2<CR>gv=gv
 
 " Open .vimrc with <space>+e and source it with <space>+s
 nnoremap <leader>e :vsplit $MYVIMRC<cr>
