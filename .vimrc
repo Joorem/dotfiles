@@ -118,6 +118,8 @@ nnoremap f <C-W>=
 nnoremap F <C-W>_<C-W>\|
 nnoremap - :resize -5<cr>
 nnoremap + :resize +5<cr>
+nnoremap <leader>- :vertical resize -5<cr>
+nnoremap <leader>+ :vertical resize +5<cr>
 
 " Quit insert mode with Ctrl+d
 inoremap <C-d> <Esc>
