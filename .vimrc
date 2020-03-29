@@ -77,6 +77,7 @@ if &shell =~# 'fish$'
   set shell=sh
 endif
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -209,6 +210,38 @@ augroup vimrcEx
     autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
     autocmd BufReadPost *.cnf set syntax=dosini
 augroup END
+
+" ClearView: make the UI minimalist with Ctrl+P (for screenshots)
+let s:cleared = 0
+let s:ve = &t_ve
+function! ClearView()
+    if s:cleared == 0
+        NERDTreeClose
+        set laststatus=0
+        set nocursorline
+        set nonumber
+        set noruler
+        set noshowcmd
+        set noshowmode
+        set signcolumn=no
+        set t_ve=
+        set guicursor=a:xxx
+        let s:cleared = 1
+    else
+        NERDTreeToggle
+        wincmd p
+        set laststatus=2
+        set cursorline
+        set number
+        set ruler
+        set showcmd
+        set showmode
+        set signcolumn=yes
+        execute 'set t_ve=' . s:ve
+        let s:cleared = 0
+    endif
+endfunction
+nnoremap <C-p> :call ClearView()<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -355,6 +388,7 @@ map <C-g> :Magit<cr>
 " vim-devicons (https://github.com/ryanoasis/vim-devicons)
 "
 let g:WebDevIconsOS = 'Darwin' " See https://github.com/ryanoasis/vim-devicons/pull/135
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors
