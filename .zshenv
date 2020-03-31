@@ -4,6 +4,7 @@ export EDITOR='vim'
 export GPG_TTY=$(tty)
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US:en"
+export LC_ALL="en_US.UTF-8"
 export LC_PAPER="en_US.UTF-8"
 export LC_ADDRESS="en_US.UTF-8"
 export LC_MONETARY="en_US.UTF-8"
