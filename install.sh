@@ -22,6 +22,7 @@ URL_ZSH_GITPROMPT='https://github.com/olivierverdier/zsh-git-prompt'
 #
 mkdir -p \
   ~/.config/aria2c \
+  ~/.config/bat \
   ~/.gnupg \
   ~/.vim_runtime/temp_dirs/undodir \
   ~/.zsh
