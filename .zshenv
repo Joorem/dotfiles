@@ -25,3 +25,4 @@ export PAGER='less'
 export PATH="$PATH:/Users/jlegal/admin:/opt/local/bin"
 export TERM=xterm-256color
 export TMUX_TMPDIR="$HOME/.tmux"
+export STARSHIP_CONFIG=~/.config/starship/starship.toml

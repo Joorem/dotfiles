@@ -10,15 +10,16 @@ I spend a lot of time in my terminal and as a Mac user I use [iTerm2][29]. I can
 
 # $SHELL
 
-I used ZSH for years but since I tried [fish][43] I try to slowly migrate to it and find my way. The configuration present in this repository is quite simple for now and I will slowly tweak it.
+I use ZSH with some plugins (managed by [zplug][zplug]) and the [🚀 Starship][starship] prompt!
 
 ## External programs
 
 * [bat][bat] (replacement for `cat`)
+* [lsd][lsd] (replacement for `ls`)
 
 # $EDITOR
 
-I use [Vim][8] on a daily basis and tweak it regularly. This setup is partially inspired by [amix][5] and [Learn Vimscript the Hard Way][12]. I currently use the theme [gruvbox8][45].
+I use [Vim][8] or [neovim][nvim] on a daily basis and tweak it regularly. This setup is partially inspired by [amix][5] and [Learn Vimscript the Hard Way][12]. I currently use the theme [gruvbox8][45].
 
 Here is a screenshot of what it looks like:
 
@@ -133,6 +134,10 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [48]:https://git-scm.com
 [49]:https://github.com/neovim/neovim/wiki/FAQ#python-support-isnt-working
 [bat]:https://github.com/sharkdp/bat
+[lsd]:https://github.com/Peltoche/lsd
+[nvim]:https://github.com/neovim/neovim
 [nginx]:https://github.com/chr4/nginx.vim
+[starship]:https://github.com/starship/starship
 [vim-coc]:https://github.com/neoclide/coc.nvim
 [vim-haproxy]:https://github.com/Joorem/vim-haproxy
+[zplug]:https://github.com/zplug/zplug
