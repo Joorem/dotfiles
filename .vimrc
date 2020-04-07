@@ -268,6 +268,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
+Plug 'arcticicestudio/nord-vim'
 
 " Filetype & Syntax
 Plug 'Glench/Vim-Jinja2-Syntax'
@@ -368,7 +369,7 @@ map <leader>nf :NERDTreeFind<cr>
 "
 " vim-airline (https://github.com/vim-airline/vim-airline)
 "
-let g:airline_theme='gruvbox8'
+let g:airline_theme='nord'
 let g:airline_highlighting_cache = 1
 let g:airline_powerline_fonts = 1
 
@@ -402,4 +403,4 @@ let g:WebDevIconsOS = 'Darwin' " See https://github.com/ryanoasis/vim-devicons/p
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax enable
-colorscheme gruvbox8
+colorscheme nord
