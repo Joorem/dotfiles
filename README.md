@@ -3,29 +3,44 @@
 
 # $TERM
 
-I spend a lot of time in my terminal and as a Mac user I use [iTerm2][29]. I cannot imagine living without all the functionalities it offers: clever bindings, Tmux integration, a large amount of settings, etc..
+I spend a lot of time in my terminal and as a :computer: Mac user I use [iTerm2][29].
+I cannot imagine living without all the functionalities it offers: clever
+bindings, Tmux integration, a large amount of settings, etc..
 
 * **Theme**: [gruvbox][40]
 * **Font**: [Anonymice Nerd Font Mono][41] (a recompilation of [Anonymous Pro][42] which I need for `vim-devicons`)
 
 # $SHELL
 
-I use ZSH with some plugins (managed by [zplug][zplug]) and the [🚀 Starship][starship] prompt!
+I use ZSH with some plugins (managed by [zplug][zplug]) and the
+[:rocket: Starship][starship] prompt!
 
-## External programs
+## :fire: External programs
 
 * [bat][bat] (replacement for `cat`)
+* [fd][fd] (alternative for `find`)
 * [lsd][lsd] (replacement for `ls`)
+
+## :sparkles: Zplug
+
+| Plugin                                   | Description                        |
+|------------------------------------------|------------------------------------|
+| [git-cal][gitcal]                        | Github like contributions calendar |
+| [zsh-autosuggestions][zsh-as]            | Fish-like autosuggestions          |
+| [zsh-syntax-highlighting][zsh-highlight] | Fish-like syntax highlighting      |
+| [zsh-history-substring-search][zsh-hss]  | Fish-like history search           |
 
 # $EDITOR
 
-I use [Vim][8] or [neovim][nvim] on a daily basis and tweak it regularly. This setup is partially inspired by [amix][5] and [Learn Vimscript the Hard Way][12]. I currently use the theme [gruvbox8][45].
+I use [Vim][8] or [neovim][nvim] on a daily basis and tweak it regularly. This
+setup is partially inspired by [amix][5] and [Learn Vimscript the Hard Way][12].
+I currently use the theme [gruvbox8][45].
 
 Here is a screenshot of what it looks like:
 
 ![iTerm & Vim screenshot](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-gruvbox.png)
 
-## Dependencies
+## :exclamation: Dependencies
 
 Some of the plugins I currently use need externals programs to work correctly.
 
@@ -36,49 +51,40 @@ Some of the plugins I currently use need externals programs to work correctly.
 * [shellcheck][34] (needed by `syntastic`)
 * [pynvim][49] (needed by `LeaderF`)
 
-## Plugins
+## :sparkles: Plugins
 
-| Plugin                      | Description                                      |
-| --------------------------- | ------------------------------------------------ |
-| [ALE][15]                   | Check syntax in Vim asynchronously and fix files |
-| [ansible-vim][25]           | Syntax highlighting for Ansible                  |
-| [coc.vim][vim-coc]          | Intellisense engine for Vim8 & Neovim            |
-| [LeaderF][11]               | Efficient fuzzy finder                           |
-| [NERD Tree][2]              | A Tree explorer                                  |
-| [NERD Syntax Highlight][36] | Syntax and highlight for NERD Tree               |
-| [NERD Tree Git plugin][20]  | Git status in NERD Tree                          |
-| [nginx.vim][nginx]          | Syntax for nginx files                           |
-| [delimitMate][19]           | Automatic closing of "", (), {}, etc             |
-| [rust.vim][26]              | Syntax & Syntastic integration for rust          |
-| [Tagbar][22]                | Displays tags in a window, ordered by scope      |
-| [Undotree][24]              | Undo history visualizer                          |
-| [vim-airline][1]            | Lean & mean status/tabline                       |
-| [vim-bracketed-paste][13]   | Handles bracketed-paste-mode                     |
-| [vim-colorizer][47]         | Colorize all text in the form #rrggbb or #rgb    |
-| [vim-commentary][28]        | Comment stuff out                                |
-| [vim-devicons][37]          | Adds file type icons to Vim plugins              |
-| [vim-easy-align][3]         | Alignment plugin                                 |
-| [vim-fish][44]              | Vim support for editing fish scripts             |
-| [vim-git][30]               | Vim Git runtime files                            |
-| [vim-gruvbox8][45]          | Simplified and optimized Gruvbox colorscheme     |
-| [vim-haproxy][vim-haproxy]  | Syntax and highlighting for HAProxy              |
-| [vim-plug][6]               | Minimalist Vim Plugin Manager                    |
-| [vim-puppet][14]            | Syntax, formatting, ctags, for Puppet            |
-| [vim-repeat][30]            | Enable repeating supported plugin maps with "."  |
-| [vim-signify][23]           | Show a VCS diff using Vim                        |
-| [vim-smoothie][46]          | Smooth scrolling for Vim                         |
-| [vim-toml][35]              | Syntax for TOML                                  |
-| [vim-vimlint][27]           | Lint for vim script                              |
-| [vim-vimlparser][31]        | Vim script parser                                |
-| [vimagit][21]               | Ease your git workflow within Vim                |
+| Plugin                      | Description                      | Plugin                     | Description                          |
+| --------------------------- | ---------------------------------| ---------------------------| -------------------------------------|
+| [ALE][15]                   | Check syntax asynchronously      | [vim-commentary][28]       | Comment stuff out                    |
+| [ansible-vim][25]           | Syntax highlighting for Ansible  | [vim-devicons][37]         | Adds file type icons to Vim plugins  |
+| [coc.vim][vim-coc]          | Intellisense engine              | [vim-easy-align][3]        | Alignment plugin                     |
+| [LeaderF][11]               | Efficient fuzzy finder           | [vim-fish][44]             | Vim support for editing fish scripts |
+| [NERD Tree][2]              | A Tree explorer                  | [vim-git][30]              | Vim Git runtime files                |
+| [NERD Syntax Highlight][36] | Syntax & highlight in NERD Tree  | [vim-gruvbox8][45]         | Optimized Gruvbox colorscheme        |
+| [NERD Tree Git plugin][20]  | Git status in NERD Tree          | [vim-haproxy][vim-haproxy] | Syntax and highlighting for HAProxy  |
+| [nginx.vim][nginx]          | Syntax for nginx files           | [vim-plug][6]              | Minimalist Vim Plugin Manager        |
+| [delimitMate][19]           | Automatic closing of "", (), etc | [vim-puppet][14]           | Puppet syntax, formatting, ctags     |
+| [rust.vim][26]              | Rust syntax & Syntastic          | [vim-repeat][30]           | Repeating supported plugin with "."  |
+| [Tagbar][22]                | Displays tags in a window        | [vim-signify][23]          | Show a VCS diff using Vim            |
+| [Undotree][24]              | Undo history visualizer          | [vim-smoothie][46]         | Smooth scrolling for Vim             |
+| [vim-airline][1]            | Lean & mean status/tabline       | [vim-toml][35]             | Syntax for TOML                      |
+| [vim-bracketed-paste][13]   | Handles bracketed-paste-mode     | [vim-vimlint][27]          | Lint for vim script                  |
+| [vim-colorizer][47]         | Colorize color tags              | [vim-vimlparser][31]       | Vim script parser                    |
+| [vimagit][21]               | Ease your git workflow           |                            |                                      |
 
 # Installation
 
-If you want to test my configuration just run the following command, it will create symbolic links between your `$HOME` directory and the needed files (.vimrc, etc.):
+If you want to test my configuration just run the following commands, it will
+create symbolic links between your `$HOME` directory and the needed files
+(.vimrc, etc.).
+
+:warning: DO NOT FORGET TO BACKUP YOUR EXISTING CONFIG FILES :warning:
 
 ```sh
 git clone --quiet https://github.com/Joorem/dotfiles.git && \
 cd dotfiles && \
+git submodule --quiet init && \
+git submodule --quiet update && \
 sh install.sh && \
 vim -E -s -u ~/.vimrc +PlugInstall +qall
 ```
@@ -130,6 +136,8 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [48]:https://git-scm.com
 [49]:https://github.com/neovim/neovim/wiki/FAQ#python-support-isnt-working
 [bat]:https://github.com/sharkdp/bat
+[fd]:https://github.com/sharkdp/fd
+[gitcal]:https://github.com/k4rthik/git-cal
 [lsd]:https://github.com/Peltoche/lsd
 [nvim]:https://github.com/neovim/neovim
 [nginx]:https://github.com/chr4/nginx.vim
@@ -137,3 +145,6 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [vim-coc]:https://github.com/neoclide/coc.nvim
 [vim-haproxy]:https://github.com/Joorem/vim-haproxy
 [zplug]:https://github.com/zplug/zplug
+[zsh-as]:https://github.com/zsh-users/zsh-autosuggestions
+[zsh-highlight]:https://github.com/zsh-users/zsh-syntax-highlighting
+[zsh-hss]:https://github.com/zsh-users/zsh-history-substring-search
