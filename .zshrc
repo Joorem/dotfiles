@@ -87,6 +87,7 @@ dig-color () {
 
 ###################### Alias #######################
 alias c=clear
+alias cat=bat
 alias df='df -h'
 alias dig=dig-color
 alias drill='drill-color'
