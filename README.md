@@ -38,7 +38,7 @@ I currently use the theme [Nord][nord-vim].
 
 Here is a screenshot of what it looks like:
 
-![iTerm & Vim screenshot](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-gruvbox.png)
+![iTerm & Vim screenshot](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-nord.png)
 
 ## :exclamation: Dependencies
 
