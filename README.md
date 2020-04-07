@@ -72,10 +72,6 @@ Some of the plugins I currently use need externals programs to work correctly.
 | [vim-vimlparser][31]        | Vim script parser                                |
 | [vimagit][21]               | Ease your git workflow within Vim                |
 
-## Syntax
-
-* [jinja][18]
-
 # Installation
 
 If you want to test my configuration just run the following command, it will create symbolic links between your `$HOME` directory and the needed files (.vimrc, etc.):

@@ -270,8 +270,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 
 " Filetype & Syntax
-" Plug 'Joorem/vim-haproxy'
-Plug '~/Documents/git/vim-haproxy'
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'Joorem/vim-haproxy'
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'dag/vim-fish'
