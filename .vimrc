@@ -95,11 +95,15 @@ nnoremap <Right> <nop>
 nnoremap <Up>    <nop>
 nnoremap <Down>  <nop>
 
-" Navigate through windows with Ctrl+(h|j|k|l)
-nnoremap <C-j> <C-W>j
-nnoremap <C-h> <C-W>h
-nnoremap <C-k> <C-W>k
-nnoremap <C-l> <C-W>l
+" Navigate through windows with Ctrl+(h|j|k|l) or with H J K L
+nnoremap <C-h> :wincmd h<cr>
+nnoremap <C-j> :wincmd j<cr>
+nnoremap <C-k> :wincmd k<cr>
+nnoremap <C-l> :wincmd l<cr>
+nnoremap H :wincmd h<cr>
+nnoremap J :wincmd j<cr>
+nnoremap K :wincmd k<cr>
+nnoremap L :wincmd l<cr>
 
 " Search for the current selected word with *
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
