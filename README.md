@@ -7,7 +7,7 @@ I spend a lot of time in my terminal and as a :computer: Mac user I use [iTerm2]
 I cannot imagine living without all the functionalities it offers: clever
 bindings, Tmux integration, a large amount of settings, etc..
 
-* **Theme**: [gruvbox][40]
+* **Theme**: [Nord][nord-iterm2]
 * **Font**: [Anonymice Nerd Font Mono][41] (a recompilation of [Anonymous Pro][42] which I need for `vim-devicons`)
 
 # $SHELL
@@ -34,7 +34,7 @@ I use ZSH with some plugins (managed by [zplug][zplug]) and the
 
 I use [Vim][8] or [neovim][nvim] on a daily basis and tweak it regularly. This
 setup is partially inspired by [amix][5] and [Learn Vimscript the Hard Way][12].
-I currently use the theme [gruvbox8][45].
+I currently use the theme [Nord][nord-vim].
 
 Here is a screenshot of what it looks like:
 
@@ -141,6 +141,8 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [lsd]:https://github.com/Peltoche/lsd
 [nvim]:https://github.com/neovim/neovim
 [nginx]:https://github.com/chr4/nginx.vim
+[nord-iterm2]:https://github.com/arcticicestudio/nord-iterm2
+[nord-vim]:https://github.com/arcticicestudio/nord-vim
 [starship]:https://github.com/starship/starship
 [vim-coc]:https://github.com/neoclide/coc.nvim
 [vim-haproxy]:https://github.com/Joorem/vim-haproxy
