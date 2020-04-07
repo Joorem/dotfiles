@@ -1,3 +1,22 @@
+##################### Plugins #####################
+source ~/.config/zplug/init.zsh
+
+zplug "k4rthik/git-cal", as:command
+zplug "zpm-zsh/mysql-colorize"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+zplug load
+
 ##################### Options #####################
 HISTFILE=~/.zsh_history
 HISTSIZE=2000
@@ -8,8 +27,6 @@ setopt interactivecomments
 setopt nocheckjobs
 setopt nohup
 unsetopt beep
-
-source ~/.zsh/zsh-git-prompt/zshrc.sh
 
 # Color vars
 autoload -U colors terminfo
@@ -22,9 +39,6 @@ compinit
 
 # Zargs pawa
 autoload -U zargs
-
-hash -d ports=/usr/ports
-hash -d src=/usr/src
 
 #################### Completion ####################
 zmodload -a autocomplete
@@ -71,55 +85,25 @@ dig-color () {
   ';
 }
 
-send-SSH-pubkey () {
-  PUBKEY=$(cat ~/.ssh/id_rsa.pub)
-  ssh $1 "mkdir -p .ssh; chmod 700 .ssh; echo $PUBKEY >>.ssh/authorized_keys"
-}
-
 ###################### Alias #######################
 alias c=clear
 alias df='df -h'
 alias dig=dig-color
 alias drill='drill-color'
 alias grep="LC_ALL=C grep --color=always"
-alias l='ls -lh'
-alias ll='ls -alh'
-alias lol="$HOME/Documents/Tools/nyancat/src/nyancat -n"
+alias l='lsd --long --human-readable --color always --size short'
+alias ll='l --all'
 alias meteo="curl http://wttr.in"
 alias s='su -'
-alias puppet-lint='puppet-lint --no-2sp_soft_tabs-check --no-80chars-check'
-alias ssp='ssh -l jorem eva.joworld.net'
-alias pfsi='pfctl -si'
-alias pfssh='pfctl -t ssh-bruteforce -T show'
-alias vi=vim
 alias vcurl='curl --silent --dump-header - -o /dev/null'
+alias vi=nvim
 alias view='vi -R'
 
 ###################### Bindkeys #######################
 bindkey -e
 bindkey '^R' history-incremental-search-backward
-bindkey "^[[3~" delete-char # Fn + Delete
+bindkey "^[[3~" delete-char                  # Fn + Delete
+bindkey '^[[A' history-substring-search-up   # Up
+bindkey '^[[B' history-substring-search-down # Down
 
-function title {
-  t="%n@%m %~ %y"
-
-  case $TERM in
-    *xterm*|(u|dt|k|E)term)
-      print -nP "\e]0;${t}\a"
-    ;;
-  esac
-}
-
-function precmd {
-  title
-
-  if [[ $UID -eq 0 ]]; then
-    local user_color="${fg[green]}"
-  else
-    local user_color="${fg[cyan]}"
-  fi
-
-  local user_at_host="%{${user_color}%}%n%{${fg[magenta]}%}@%{${fg[blue]}%}%m"
-
-  PROMPT="${user_at_host} $(git_super_status)%f%~ > "
-}
+eval "$(starship init zsh)"
