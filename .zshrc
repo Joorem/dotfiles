@@ -2,7 +2,6 @@
 source ~/.config/zplug/init.zsh
 
 zplug "k4rthik/git-cal", as:command
-zplug "zpm-zsh/mysql-colorize"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
