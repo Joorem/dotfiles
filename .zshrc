@@ -107,4 +107,14 @@ bindkey "^[[3~" delete-char                  # Fn + Delete
 bindkey '^[[A' history-substring-search-up   # Up
 bindkey '^[[B' history-substring-search-down # Down
 
+###################### Prompt #######################
 eval "$(starship init zsh)"
+
+###################### LS_COLORS #######################
+ETC_NORD_COLORS=~/.config/nord-dircolors/src/dir_colors
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  [ -r "$ETC_NORD_COLORS" ] && eval $(gdircolors -b $ETC_NORD_COLORS)
+else
+  [ -r "$ETC_NORD_COLORS" ] && eval $(dircolors -b $ETC_NORD_COLORS)
+fi
