@@ -8,7 +8,7 @@
     pager  = less -R
 
 [commit]
-    gpgsign = false
+    gpgsign = true
 
 [color]
     branch      = auto
