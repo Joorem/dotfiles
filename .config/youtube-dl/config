@@ -1,0 +1,45 @@
+#
+# Filesystem Options
+#
+
+# Output filename template, see the "OUTPUT TEMPLATE" for all the info
+--output '~/Downloads/%(title)s.%(ext)s'
+
+# Force resume of partially downloaded files.  By default, youtube-dl will resume down-
+# loads if possible
+--continue
+
+# Do not use the Last-modified header to set the file modification time
+--no-mtime
+
+
+#
+# Video Format Options
+#
+
+--format 'bestvideo+bestaudio'
+
+# If a merge is required (e.g. bestvideo+bestaudio), output to given
+# container format. One of mkv, mp4, ogg, webm, flv. Ignored if no merge is
+# required
+--merge-output-format 'mkv'
+
+
+#
+# Subtitle Options
+#
+
+# Download all the available subtitles of the video
+--all-subs
+
+
+#
+# Post-processing Options
+#
+
+# Specify  ffmpeg/avconv audio quality, insert a value between 0 (better) and 9 (worse)
+# for VBR or a specific bitrate like 128K (default 5)
+--audio-quality 0
+
+# Embed subtitles in the video (only for mp4, webm and mkv videos)
+--embed-subs
