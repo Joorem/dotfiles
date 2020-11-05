@@ -143,6 +143,9 @@ nnoremap zz :w<cr>
 nnoremap <leader>e :vsplit $MYVIMRC<cr>
 nnoremap <leader>s :source $MYVIMRC<cr>
 
+" Remove exra whitespaces
+nnoremap <leader>t :StripWhitespace<cr>
+"
 " Reload file with Ctrl+e (quite usefull when developing a syntax file)
 nnoremap <C-e> :e<cr>
 
@@ -181,14 +184,6 @@ augroup insert_no_hlsearch
   autocmd InsertEnter * setlocal nohlsearch
   autocmd InsertLeave * setlocal hlsearch
 augroup END
-
-" Remove trailing whitespace
-function! StripWhitespace()
-    let l:save = winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
-endfunction
-noremap <leader>t :call StripWhitespace()<cr>
 
 " Turn persistent undo on
 try
@@ -292,6 +287,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
 Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-git'
