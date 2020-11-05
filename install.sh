@@ -35,6 +35,7 @@ for file in \
   .config/nord-dircolors \
   .config/zplug \
   .config/starship \
+  .config/youtube-dl \
   .gnupg/* \
   .gitconfig \
   .vim/* \

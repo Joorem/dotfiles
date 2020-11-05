@@ -1,4 +1,18 @@
 #
+# Download Options
+#
+
+# Use the specified external downloader. Currently supports
+# aria2c,avconv,axel,curl,ffmpeg,httpie,wget
+--external-downloader aria2c
+
+# Give these arguments to the external downloader
+--external-downloader-args "--continue --max-concurrent-downloads=2 --max-connection-per-server=5 --split=5 --min-split-size=1M"
+
+
+#
+#
+#
 # Filesystem Options
 #
 
