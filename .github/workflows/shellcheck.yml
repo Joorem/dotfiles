@@ -6,5 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run ShellCheck
-        uses: ludeeus/action-shellcheck@master
+      - name: Run Shellcheck
+        uses: azohra/shell-linter@latest
+        with:
+          path: "install.sh,install-macos.sh"
