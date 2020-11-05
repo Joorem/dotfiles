@@ -94,10 +94,11 @@ alias drill='drill-color'
 alias grep="LC_ALL=C grep --color=always"
 alias l='lsd --long --human-readable --color always --size short'
 alias ll='l --all'
+alias llt='ll --tree'
 alias meteo="curl http://wttr.in"
 alias s='su -'
 alias vcurl='curl --silent --dump-header - -o /dev/null'
-alias vi=nvim
+alias vi=vim
 alias view='vi -R'
 
 ###################### Bindkeys #######################
