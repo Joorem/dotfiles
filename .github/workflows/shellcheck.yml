@@ -6,7 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run Shellcheck
-        uses: azohra/shell-linter@latest
-        with:
-          path: "install.sh,install-macos.sh"
+      - name: Run the sh-checker
+        uses: luizm/action-sh-checker@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHELLCHECK_OPTS: -x
