@@ -32,7 +32,7 @@ set tabstop=2                     " set spaces for tab
 " Input
 "
 set textwidth=0
-set formatoptions-=c              " automatic formatting configuration"
+set formatoptions-=c              " automatic formatting configuration
 set switchbuf=usetab
 
 "
@@ -276,6 +276,8 @@ Plug 'Joorem/vim-haproxy'
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'dag/vim-fish'
+Plug 'godlygeek/tabular'
+Plug 'hashivim/vim-terraform'
 Plug 'pearofducks/ansible-vim'
 Plug 'rodjek/vim-puppet'
 Plug 'rust-lang/rust.vim'
@@ -377,6 +379,11 @@ let g:airline_powerline_fonts = 1
 " tagbar (https://github.com/majutsushi/tagbar)
 "
 map <C-t> :TagbarToggle<cr>
+
+"
+" Terraform
+"
+let g:terraform_align = 1
 
 
 "
