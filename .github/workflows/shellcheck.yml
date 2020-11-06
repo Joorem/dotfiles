@@ -1,4 +1,4 @@
-name: Shellcheck
+name: Lint
 on: [push,pull_request]
 jobs:
   shellcheck:
@@ -12,3 +12,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SHELLCHECK_OPTS: -x
           SHFMT_OPTS: -i 2
+  vint:
+    name: Vint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run the Vim linter
+        uses: reviewdog/action-vint@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
