@@ -1,9 +1,0 @@
-language: bash
-sudo: required
-dist: bionic
-
-before_install:
-    - sudo apt-get install shellcheck
-
-script:
-- shellcheck -x install.sh
