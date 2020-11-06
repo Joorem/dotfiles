@@ -618,6 +618,9 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 # Rebuild the index from scratch
 #sudo mdutil -E / > /dev/null
 
+# Disable mds, because I use Alfred.app
+sudo mdutil -a -i off
+
 ###############################################################################
 # Terminal & iTerm 2                                                          #
 ###############################################################################
