@@ -1,0 +1,14 @@
+name: Shellcheck
+on: [push,pull_request]
+jobs:
+  shellcheck:
+    name: Shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run the sh-checker
+        uses: luizm/action-sh-checker@v0.1.8
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHELLCHECK_OPTS: -x
+          SHFMT_OPTS: -i 2
