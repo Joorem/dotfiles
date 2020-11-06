@@ -153,6 +153,9 @@ nnoremap <C-e> :e<cr>
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
 
+" Fix indentation
+nnoremap <silent> <leader>m gg=G
+
 " Open a new buffer in a vsplit and enter INSERT mode
 nnoremap <leader>v :vnew<cr>i
 
