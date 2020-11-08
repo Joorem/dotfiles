@@ -1,3 +1,9 @@
+# Set  the theme for syntax highlighting
 --theme="Nord"
+
+# Specify when to use the pager
 --paging="never"
+
+# Configure which elements (line numbers, file headers, grid borders,
+# Git modifications, ..) to display in addition to the file contents
 --style="plain"
