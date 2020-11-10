@@ -11,8 +11,6 @@
 
 
 #
-#
-#
 # Filesystem Options
 #
 
@@ -25,6 +23,14 @@
 
 # Do not use the Last-modified header to set the file modification time
 --no-mtime
+
+
+#
+# Verbosity / Simulation Option
+#
+
+# Ignore warnings
+--no-warnings
 
 
 #
