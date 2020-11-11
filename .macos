@@ -921,6 +921,15 @@ defaults write com.twitter.twitter-mac HideInBackground -bool true
 defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 
 ###############################################################################
+# QLColorCode (QuickLook plugin)
+###############################################################################
+
+defaults write org.n8gray.QLColorCode font "JetBrainsMono Nerd Font"
+defaults write org.n8gray.QLColorCode fontSizePoints 8
+defaults write org.n8gray.QLColorCode hlTheme ide-xcode
+defaults write org.n8gray.QLColorCode extraHLFlags '-l -W'
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
