@@ -20,8 +20,10 @@ brew "git"
 brew "git-delta"
 brew "git-flow"
 brew "htop"
+brew "httpie"
 brew "hugo"
 brew "lsd"
+brew "mtr"
 brew "neofetch"
 brew "neovim"
 brew "nmap"
@@ -60,6 +62,10 @@ cask "iterm2"
 cask "microsoft-office"
 cask "postman"
 cask "protonmail-bridge"
+cask "qlcolorcode"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "quicklook-json"
 cask "sequel-pro"
 cask "spotify"
 cask "sublime-text"
@@ -69,6 +75,7 @@ cask "whatsapp"
 
 # Mac App Store
 mas "LINE", id: 539883307
+mas "AdGuard for Safari", id: 1440147259
 mas "Numbers", id: 409203825
 mas "Keynote", id: 409183694
 mas "Pages", id: 409201541
