@@ -10,6 +10,7 @@ tap "universal-ctags/universal-ctags"
 brew "aria2"
 brew "awscli"
 brew "bat"
+brew "checkov"
 brew "coreutils"
 brew "dnscrypt-proxy", restart_service: true
 brew "dust"
