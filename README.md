@@ -10,6 +10,8 @@ bindings, Tmux integration, a large amount of settings, etc..
 * **Theme**: [Nord][nord-iterm2]
 * **Font**: [Anonymice Nerd Font Mono][41] (a recompilation of [Anonymous Pro][42] which I need for `vim-devicons`)
 
+Sometimes I use [Alacritty][alacritty] which is super fast... Like really F.A.S.T!
+
 # $SHELL
 
 I use ZSH with some plugins (managed by [zplug][zplug]) and the
@@ -135,6 +137,7 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [47]:https://github.com/lilydjwg/colorizer
 [48]:https://git-scm.com
 [49]:https://github.com/neovim/neovim/wiki/FAQ#python-support-isnt-working
+[alacritty]:https://github.com/alacritty/alacritty
 [bat]:https://github.com/sharkdp/bat
 [fd]:https://github.com/sharkdp/fd
 [gitcal]:https://github.com/k4rthik/git-cal
