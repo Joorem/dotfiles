@@ -48,6 +48,7 @@ brew "zplug"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 
 # Applications
+cask "alacritty"
 cask "alfred"
 cask "android-file-transfer"
 cask "drawio"
