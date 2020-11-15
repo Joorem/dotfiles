@@ -14,6 +14,7 @@ brew "checkov"
 brew "coreutils"
 brew "dnscrypt-proxy", restart_service: true
 brew "dust"
+brew "dog"
 brew "fd"
 brew "x265"
 brew "ffmpeg"
