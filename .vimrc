@@ -54,7 +54,6 @@ set showtabline=0                 " do not show the tabline (already shown with 
 set scrolloff=5                   " minimal number of screen lines to keep above and below the cursor
 set splitbelow                    " open new horizontal split below the current one
 set splitright                    " open new vertical split to the righ of the current one
-set termguicolors                 " enables 24-bit RGB color
 set visualbell t_vb=              " turn off error beep/flash
 set wildmenu                      " turn on the Wild menu
 
@@ -280,6 +279,7 @@ Plug 'pearofducks/ansible-vim'
 Plug 'rodjek/vim-puppet'
 Plug 'rust-lang/rust.vim'
 Plug 'syngan/vim-vimlint'
+Plug 'tmux-plugins/vim-tmux'
 Plug 'vim-jp/vim-vimlparser'
 
 " Utility
