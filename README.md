@@ -34,7 +34,7 @@ I use ZSH with some plugins (managed by [zplug][zplug]) and the
 
 # $EDITOR
 
-I use [Vim][8] or [neovim][nvim] on a daily basis and tweak it regularly. This
+I use [Vim][8] on a daily basis and tweak it regularly. This
 setup is partially inspired by [amix][5] and [Learn Vimscript the Hard Way][12].
 I currently use the theme [Nord][nord-vim].
 
@@ -142,7 +142,6 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [fd]:https://github.com/sharkdp/fd
 [gitcal]:https://github.com/k4rthik/git-cal
 [lsd]:https://github.com/Peltoche/lsd
-[nvim]:https://github.com/neovim/neovim
 [nginx]:https://github.com/chr4/nginx.vim
 [nord-iterm2]:https://github.com/arcticicestudio/nord-iterm2
 [nord-vim]:https://github.com/arcticicestudio/nord-vim
