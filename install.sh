@@ -30,11 +30,13 @@ mkdir -p \
 # Symlinks
 #
 for file in \
+  .config/alacritty \
   .config/aria2c/* \
   .config/bat/* \
   .config/nord-dircolors \
   .config/zplug \
   .config/starship \
+  .config/tmux \
   .config/youtube-dl \
   .gnupg/* \
   .gitconfig \

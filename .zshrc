@@ -97,6 +97,7 @@ alias ll='l --all'
 alias llt='ll --tree'
 alias meteo="curl http://wttr.in"
 alias s='su -'
+alias tmux='tmux -f ~/.config/tmux/tmux.conf'
 alias vcurl='curl --silent --dump-header - -o /dev/null'
 alias vi=vim
 alias view='vi -R'
