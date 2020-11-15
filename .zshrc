@@ -84,6 +84,34 @@ dig-color () {
   ';
 }
 
+transmission-list-torrent () {
+  if (( $# == 0 )) then
+    transmission-remote --list
+  else
+    while (($#)) do
+      transmission-remote --list|grep -i "$1"
+      shift
+    done
+  fi
+}
+
+transmission-remove-torrent () {
+  if (( $# == 0 )) then
+    return
+  fi
+
+  while (($#)) do
+    ids+=$(transmission-remote --list|awk "tolower(\$0) ~ /$1/{printf \"%s,\", \$1}")
+    shift
+  done
+
+   transmission-remote --torrent "$ids" --list
+   printf "\n\nDelete those torrents? "
+   read ans
+
+   transmission-remote --torrent "$ids" --remove-and-delete
+}
+
 ###################### Alias #######################
 alias aria2c="aria2c --conf-path=$HOME/.config/aria2c/aria2.conf"
 alias c=clear
@@ -98,6 +126,8 @@ alias llt='ll --tree'
 alias meteo="curl http://wttr.in"
 alias s='su -'
 alias tmux='tmux -f ~/.config/tmux/tmux.conf'
+alias tol='transmission-list-torrent'
+alias tor='transmission-remove-torrent'
 alias vcurl='curl --silent --dump-header - -o /dev/null'
 alias vi=vim
 alias view='vi -R'
