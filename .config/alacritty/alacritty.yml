@@ -216,6 +216,8 @@ key_bindings:
   - { key: H,              mods: Command|Control,   chars: "\x1b\x1b\x5b\x44" } # Alt-Left
   - { key: K,              mods: Command|Control,   chars: "\x1b\x1b\x5b\x41" } # Alt-Up
   - { key: J,              mods: Command|Control,   chars: "\x1b\x1b\x5b\x42" } # Alt-Down
+  # Kill pane
+  - { key: W,              mods: Command,           chars: "\x02\x78"         } # Ctrl-b x
 
   # Navigate between windows
   - { key: L,              mods: Command,           chars: "\x02\x6e"         } # Ctrl-b n
@@ -232,9 +234,8 @@ key_bindings:
   - { key: 26,             mods: Command,           chars: "\x02\x37"         } # Ctrl-b 7
   - { key: 28,             mods: Command,           chars: "\x02\x38"         } # Ctrl-b 8
   - { key: 25,             mods: Command,           chars: "\x02\x39"         } # Ctrl-b 9
-  # Create/Kill windows
+  # Create windows
   - { key: T,              mods: Command,           chars: "\x02\x63"         } # Ctrl-b c
-  - { key: W,              mods: Command,           chars: "\x02\x77"         } # Ctrl-b w
   # Rename Window
   - { key: I,              mods: Command,           chars: "\x0e"             } # Ctrl-n
   # Broadcast input
