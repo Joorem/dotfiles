@@ -222,6 +222,16 @@ key_bindings:
   - { key: Right,          mods: Command,           chars: "\x02\x6e"         } # Ctrl-b n
   - { key: H,              mods: Command,           chars: "\x02\x70"         } # Ctrl-b p
   - { key: Left,           mods: Command,           chars: "\x02\x70"         } # Ctrl-b p
+  # Select window (Key{0,1,2,3,4,5,6,7,8,9} on a french macOS keyboard)
+  - { key: 18,             mods: Command,           chars: "\x02\x31"         } # Ctrl-b 1
+  - { key: 19,             mods: Command,           chars: "\x02\x32"         } # Ctrl-b 2
+  - { key: 20,             mods: Command,           chars: "\x02\x33"         } # Ctrl-b 3
+  - { key: 21,             mods: Command,           chars: "\x02\x34"         } # Ctrl-b 4
+  - { key: 23,             mods: Command,           chars: "\x02\x35"         } # Ctrl-b 5
+  - { key: 22,             mods: Command,           chars: "\x02\x36"         } # Ctrl-b 6
+  - { key: 26,             mods: Command,           chars: "\x02\x37"         } # Ctrl-b 7
+  - { key: 28,             mods: Command,           chars: "\x02\x38"         } # Ctrl-b 8
+  - { key: 25,             mods: Command,           chars: "\x02\x39"         } # Ctrl-b 9
   # Create/Kill windows
   - { key: T,              mods: Command,           chars: "\x02\x63"         } # Ctrl-b c
   - { key: W,              mods: Command,           chars: "\x02\x77"         } # Ctrl-b w
@@ -229,3 +239,5 @@ key_bindings:
   - { key: I,              mods: Command,           chars: "\x0e"             } # Ctrl-n
   # Broadcast input
   - { key: I,              mods: Command|Alt,       chars: "\x1b\x4f\x52"     } # F3
+  # Search by name
+  - { key: O,              mods: Command|Shift,     chars: "\x02\x66"         } # Ctrl-b f
