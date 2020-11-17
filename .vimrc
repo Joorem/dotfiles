@@ -256,6 +256,7 @@ call plug#begin('~/.vim/plugged')
 
 " UI
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'joshdick/onedark.vim'
 Plug 'jreybert/vimagit'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'lilydjwg/colorizer'
@@ -370,7 +371,7 @@ map <leader>nf :NERDTreeFind<cr>
 "
 " vim-airline (https://github.com/vim-airline/vim-airline)
 "
-let g:airline_theme='nord'
+let g:airline_theme='onedark'
 let g:airline_highlighting_cache = 1
 let g:airline_powerline_fonts = 1
 
@@ -409,4 +410,4 @@ let g:WebDevIconsOS = 'Darwin' " See https://github.com/ryanoasis/vim-devicons/p
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax enable
-colorscheme nord
+colorscheme onedark
