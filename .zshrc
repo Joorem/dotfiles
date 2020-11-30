@@ -126,6 +126,7 @@ alias llt='ll --tree'
 alias meteo="curl http://wttr.in"
 alias s='su -'
 alias tmux='tmux -f ~/.config/tmux/tmux.conf'
+alias tad="transmission-remote --add"
 alias tol='transmission-list-torrent'
 alias tor='transmission-remove-torrent'
 alias vcurl='curl --silent --dump-header - -o /dev/null'
