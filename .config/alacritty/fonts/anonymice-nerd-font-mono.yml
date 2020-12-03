@@ -1,0 +1,9 @@
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    family: Anonymice Nerd Font Mono
+    style: Regular
+
+  # Point size
+  size: 12.0

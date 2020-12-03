@@ -1,0 +1,52 @@
+# https://github.com/phaazon/config/blob/master/alacritty/alacritty.yml
+  colors:
+    primary:
+      foreground: "#abb2bf"
+      background: "#2b2d37"
+
+      # Bright and dim foreground colors
+      #
+      # The dimmed foreground color is calculated automatically if it is not present.
+      # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
+      # is `false`, the normal foreground color will be used.
+      #dim_foreground: '0x9a9a9a'
+      #bright_foreground: '0xffffff'
+
+    # Cursor colors
+    #
+    # Colors which should be used to draw the terminal cursor. If these are unset,
+    # the cursor color will be the inverse of the cell color.
+    cursor:
+      text: '0xFFFFFF'
+      cursor: '0x5dbbc1'
+
+    # Selection colors
+    #
+    # Colors which should be used to draw the selection area. If selection
+    # background is unset, selection color will be the inverse of the cell colors.
+    # If only text is unset the cell text color will remain the same.
+    #selection:
+    #  text: '0xeaeaea'
+    #  background: '0x404040'
+
+    # Normal colors
+    normal:
+      black:   '#363a4e'
+      red:     '#ec7279'
+      green:   '#a0c980'
+      yellow:  '#deb974'
+      blue:    '#6cb6eb'
+      magenta: '#d38aea'
+      cyan:    '#5dbbc1'
+      white:   '#c5cdd9'
+
+    # Bright colors
+    bright:
+      black:   '#666666'
+      red:     '#fc626b'
+      green:   '#9de465'
+      yellow:  '#efbe63'
+      blue:    '#5bb9fc'
+      magenta: '#da7cf8'
+      cyan:    '#30e2ee'
+      white:   '#b2c9ec'
