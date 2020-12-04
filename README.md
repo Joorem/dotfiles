@@ -3,14 +3,13 @@
 
 # $TERM
 
-I spend a lot of time in my terminal and as a :computer: Mac user I use [iTerm2][29].
-I cannot imagine living without all the functionalities it offers: clever
-bindings, Tmux integration, a large amount of settings, etc..
+I spend a lot of time in my terminal and as a :computer: Mac user I used [iTerm2][29]
+for years before I discovered [Alacritty][alacritty]: this thing is blazingly fast,
+I cannot imagine using iTerm2 again... I just had to reproduce the iTerm key bindings
+I always use (see: [alacritty.yml][alacritty-yml]) & work in Tmux on my local machine.
 
-* **Theme**: [Nord][nord-iterm2]
-* **Font**: [Anonymice Nerd Font Mono][41] (a recompilation of [Anonymous Pro][42] which I need for `vim-devicons`)
-
-Sometimes I use [Alacritty][alacritty] which is super fast... Like really F.A.S.T!
+* **Theme**: [Phaazon][phaazon] ([Sonokai][sonokai] modified)
+* **Font**: [Jetbrains Nerd Font Mono][nerd-fonts]
 
 # $SHELL
 
@@ -36,11 +35,11 @@ I use ZSH with some plugins (managed by [zplug][zplug]) and the
 
 I use [Vim][8] on a daily basis and tweak it regularly. This
 setup is partially inspired by [amix][5] and [Learn Vimscript the Hard Way][12].
-I currently use the theme [Nord][nord-vim].
+I currently use the theme [Sonokai][sonokai].
 
 Here is a screenshot of what it looks like:
 
-![iTerm & Vim screenshot](https://github.com/Joorem/dotfiles/wiki/img/iterm-vim-nord.png)
+![Alacritty & Vim screenshot](https://github.com/Joorem/dotfiles/wiki/img/alacritty-vim-sonokai.png)
 
 ## :exclamation: Dependencies
 
@@ -49,7 +48,7 @@ Some of the plugins I currently use need externals programs to work correctly.
 * [ctags][39] (needed by `Tagbar`)
 * [git][48] (needed by `vim-signify` & `vimagit`)
 * [mardownlint][38] (needed by `syntastic`)
-* [nerd-fonts][33] (needed by `vim-devicons`)
+* [nerd-fonts][nerd-fonts] (needed by `vim-devicons` & `lsd`)
 * [shellcheck][34] (needed by `syntastic`)
 * [pynvim][49] (needed by `LeaderF`)
 
@@ -120,7 +119,6 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [29]:https://www.iterm2.com
 [30]:https://github.com/tpope/vim-repeat
 [31]:https://github.com/vim-jp/vim-vimlparser
-[33]:https://github.com/ryanoasis/nerd-fonts
 [34]:https://github.com/koalaman/shellcheck
 [35]:https://github.com/cespare/vim-toml
 [36]:https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
@@ -138,14 +136,16 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [48]:https://git-scm.com
 [49]:https://github.com/neovim/neovim/wiki/FAQ#python-support-isnt-working
 [alacritty]:https://github.com/alacritty/alacritty
+[alacritty-yml]:https://github.com/Joorem/dotfiles/blob/master/.config/alacritty/alacritty.yml
 [bat]:https://github.com/sharkdp/bat
 [fd]:https://github.com/sharkdp/fd
 [gitcal]:https://github.com/k4rthik/git-cal
 [lsd]:https://github.com/Peltoche/lsd
+[nerd-fonts]:https://github.com/ryanoasis/nerd-fonts
 [nginx]:https://github.com/chr4/nginx.vim
-[nord-iterm2]:https://github.com/arcticicestudio/nord-iterm2
-[nord-vim]:https://github.com/arcticicestudio/nord-vim
+[sonokai]:https://github.com/sainnhe/sonokai
 [starship]:https://github.com/starship/starship
+[phaazon]:https://github.com/phaazon/config/tree/master/alacritty
 [vim-coc]:https://github.com/neoclide/coc.nvim
 [vim-haproxy]:https://github.com/Joorem/vim-haproxy
 [zplug]:https://github.com/zplug/zplug
