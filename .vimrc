@@ -56,6 +56,9 @@ set splitbelow                    " open new horizontal split below the current 
 set splitright                    " open new vertical split to the righ of the current one
 set visualbell t_vb=              " turn off error beep/flash
 set wildmenu                      " turn on the Wild menu
+if (has('termguicolors'))
+  set termguicolors
+endif
 
 "
 " Keyboard
@@ -256,17 +259,16 @@ call plug#begin('~/.vim/plugged')
 
 " UI
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'joshdick/onedark.vim'
 Plug 'jreybert/vimagit'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'lilydjwg/colorizer'
 Plug 'mhinz/vim-signify'
 Plug 'psliwka/vim-smoothie'
+Plug 'sainnhe/sonokai'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
-Plug 'arcticicestudio/nord-vim'
 
 " Filetype & Syntax
 Plug 'Glench/Vim-Jinja2-Syntax'
@@ -369,9 +371,17 @@ map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
 
 "
+" Sonokai (https://github.com/sainnhe/sonokai)
+"
+
+let g:sonokai_style = 'andromeda'
+let g:sonokai_disable_italic_comment = 1
+let g:sonokai_diagnostic_line_highlight = 1
+
+"
 " vim-airline (https://github.com/vim-airline/vim-airline)
 "
-let g:airline_theme='onedark'
+let g:airline_theme = 'sonokai'
 let g:airline_highlighting_cache = 1
 let g:airline_powerline_fonts = 1
 
@@ -410,4 +420,4 @@ let g:WebDevIconsOS = 'Darwin' " See https://github.com/ryanoasis/vim-devicons/p
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax enable
-colorscheme onedark
+colorscheme sonokai
