@@ -7,6 +7,8 @@ tap "homebrew/services"
 tap "universal-ctags/universal-ctags"
 
 # Binaries
+brew "ansible"
+brew "ansible-lint"
 brew "aria2"
 brew "awscli"
 brew "bat"
