@@ -1,20 +1,8 @@
 ##################### Plugins #####################
-source ~/.config/zplug/init.zsh
-
-zplug "k4rthik/git-cal", as:command
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-zplug load
+ZSH_HOME_PLUGINS=~/.zsh/plugins
+source $ZSH_HOME_PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH_HOME_PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $ZSH_HOME_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ##################### Options #####################
 HISTFILE=~/.zsh_history

@@ -42,6 +42,7 @@ for file in \
   .gitconfig \
   .vim/* \
   .vimrc \
+  .zsh/* \
   .zshenv \
   .zshrc; do
   [ -d "$HOME/$file" ] && rm -r "${HOME:?}/$file"
