@@ -1,3 +1,5 @@
+scan_timeout = 10
+
 [character]
 symbol = "➜"
 style_success = "bold green"
@@ -18,3 +20,6 @@ ssh_only = true
 
 [line_break]
 disabled = false
+
+[nodejs]
+disabled = true
