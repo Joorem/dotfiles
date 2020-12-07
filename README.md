@@ -13,7 +13,7 @@ I always use (see: [alacritty.yml][alacritty-yml]) & work in Tmux on my local ma
 
 # $SHELL
 
-I use ZSH with some plugins (managed by [zplug][zplug]) and the
+I use ZSH with some plugins (managed by hand with `git submodule`) and the
 [:rocket: Starship][starship] prompt!
 
 ## :fire: External programs
@@ -22,11 +22,10 @@ I use ZSH with some plugins (managed by [zplug][zplug]) and the
 * [fd][fd] (alternative for `find`)
 * [lsd][lsd] (replacement for `ls`)
 
-## :sparkles: Zplug
+## :sparkles: ZSH plugins
 
 | Plugin                                   | Description                        |
 |------------------------------------------|------------------------------------|
-| [git-cal][gitcal]                        | Github like contributions calendar |
 | [zsh-autosuggestions][zsh-as]            | Fish-like autosuggestions          |
 | [zsh-syntax-highlighting][zsh-highlight] | Fish-like syntax highlighting      |
 | [zsh-history-substring-search][zsh-hss]  | Fish-like history search           |
@@ -148,7 +147,6 @@ vim -E -s -u ~/.vimrc +PlugInstall +qall
 [phaazon]:https://github.com/phaazon/config/tree/master/alacritty
 [vim-coc]:https://github.com/neoclide/coc.nvim
 [vim-haproxy]:https://github.com/Joorem/vim-haproxy
-[zplug]:https://github.com/zplug/zplug
 [zsh-as]:https://github.com/zsh-users/zsh-autosuggestions
 [zsh-highlight]:https://github.com/zsh-users/zsh-syntax-highlighting
 [zsh-hss]:https://github.com/zsh-users/zsh-history-substring-search

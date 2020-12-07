@@ -47,7 +47,6 @@ brew "vim"
 brew "vint"
 brew "weechat"
 brew "youtube-dl"
-brew "zplug"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 
 # Applications
