@@ -142,11 +142,9 @@ inoremap <C-e> <c-o>$
 nnoremap zz :w<cr>
 
 " Open .vimrc with <space>+e and source it with <space>+s
-nnoremap <leader>e :vsplit $MYVIMRC<cr>
+nnoremap <leader>e :tabnew $MYVIMRC<cr>
 nnoremap <leader>s :source $MYVIMRC<cr>
 
-" Remove exra whitespaces
-nnoremap <leader>t :StripWhitespace<cr>
 "
 " Reload file with Ctrl+e (quite usefull when developing a syntax file)
 nnoremap <C-e> :e<cr>
@@ -163,6 +161,7 @@ nnoremap <leader>v :vnew<cr>i
 
 " Disable hlsearch until the next search
 nnoremap <esc><esc> :silent! nohls<cr>
+nnoremap <space><space> :silent! nohls<cr>
 
 " Modify parameters in parentheses, eg: dp (delete), cp (delete + insert mode)
 onoremap p i(
@@ -178,22 +177,22 @@ xnoremap > >gv
 
 " Disable cursorline in INSERT mode
 augroup insert_no_cursorline
-    autocmd!
+  autocmd!
   autocmd InsertLeave,WinEnter * set cursorline
   autocmd InsertEnter * set nocursorline
 augroup END
 
 " Disable hlsearch when entering INSERT mode
 augroup insert_no_hlsearch
-    autocmd!
+  autocmd!
   autocmd InsertEnter * setlocal nohlsearch
   autocmd InsertLeave * setlocal hlsearch
 augroup END
 
 " Turn persistent undo on
 try
-    set undodir=~/.vim_runtime/temp_dirs/undodir
-    set undofile
+  set undodir=~/.vim_runtime/temp_dirs/undodir
+  set undofile
 catch
 endtry
 
@@ -201,52 +200,52 @@ endtry
 set list listchars=tab:»·,trail:·,nbsp:·
 
 augroup vimrcEx
-    autocmd!
+  autocmd!
 
-    " When editing a file, always jump to the last known cursor position.
-    " Don't do it for commit messages, when the position is invalid, or when
-    " inside an event handler (happens when dropping a file on gvim).
-    autocmd BufReadPost *
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it for commit messages, when the position is invalid, or when
+  " inside an event handler (happens when dropping a file on gvim).
+  autocmd BufReadPost *
         \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-            \   exe "normal g`\"" |
+        \   exe "normal g`\"" |
         \ endif
 
-    " Set syntax highlighting for specific file types
-    autocmd BufRead,BufNewFile Appraisals set filetype=ruby
-    autocmd BufRead,BufNewFile *.md set filetype=markdown
-    autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
-    autocmd BufReadPost *.cnf set syntax=dosini
+  " Set syntax highlighting for specific file types
+  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
+  autocmd BufReadPost *.cnf set syntax=dosini
 augroup END
 
 " ClearView: make the UI minimalist with Ctrl+P (for screenshots)
 let s:cleared = 0
 let s:ve = &t_ve
 function! ClearView()
-    if s:cleared == 0
-        NERDTreeClose
-        set laststatus=0
-        set nocursorline
-        set nonumber
-        set noruler
-        set noshowcmd
-        set noshowmode
-        set signcolumn=no
-        set t_ve=
-        set guicursor=a:xxx
-        let s:cleared = 1
-    else
-        NERDTreeToggle
-        wincmd p
-        set laststatus=2
-        set cursorline
-        set number
-        set ruler
-        set showcmd
-        set showmode
-        set signcolumn=yes
-        execute 'set t_ve=' . s:ve
-        let s:cleared = 0
-    endif
+  if s:cleared == 0
+    NERDTreeClose
+    set laststatus=0
+    set nocursorline
+    set nonumber
+    set noruler
+    set noshowcmd
+    set noshowmode
+    set signcolumn=no
+    set t_ve=
+    set guicursor=a:xxx
+    let s:cleared = 1
+  else
+    NERDTreeToggle
+    wincmd p
+    set laststatus=2
+    set cursorline
+    set number
+    set ruler
+    set showcmd
+    set showmode
+    set signcolumn=yes
+    execute 'set t_ve=' . s:ve
+    let s:cleared = 0
+  endif
 endfunction
 nnoremap <C-p> :call ClearView()<cr>
 
@@ -293,7 +292,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'majutsushi/tagbar'
 Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-git'
@@ -337,9 +335,9 @@ let g:Lf_CommandMap = {'<C-]>': ['<C-V>'],}
 let g:Lf_PreviewInPopup = 1
 let g:Lf_StlColorscheme = 'gruvbox_material'
 let g:Lf_WildIgnore = {
-  \ 'dir': ['.svn','.git','.hg'],
-  \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
-  \}
+      \ 'dir': ['.svn','.git','.hg'],
+      \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+      \}
 let g:Lf_WindowPosition = 'popup'
 
 "
@@ -373,7 +371,6 @@ map <leader>nf :NERDTreeFind<cr>
 "
 " Sonokai (https://github.com/sainnhe/sonokai)
 "
-
 let g:sonokai_style = 'andromeda'
 let g:sonokai_disable_italic_comment = 1
 let g:sonokai_diagnostic_line_highlight = 1
@@ -381,6 +378,9 @@ let g:sonokai_diagnostic_line_highlight = 1
 "
 " vim-airline (https://github.com/vim-airline/vim-airline)
 "
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#whitespace#show_message = 1
 let g:airline_theme = 'sonokai'
 let g:airline_highlighting_cache = 1
 let g:airline_powerline_fonts = 1
@@ -388,13 +388,12 @@ let g:airline_powerline_fonts = 1
 "
 " tagbar (https://github.com/majutsushi/tagbar)
 "
-map <C-t> :TagbarToggle<cr>
+map <leader>t :TagbarToggle<cr>
 
 "
 " Terraform
 "
 let g:terraform_align = 1
-
 
 "
 " undotree (https://github.com/mbbill/undotree)
@@ -407,6 +406,8 @@ let g:undotree_SetFocusWhenToggle = 1
 "
 " vimagit (https://github.com/jreybert/vimagit)
 "
+let g:magit_auto_close = 1
+let g:airline#extensions#vimagit#enabled = 1
 map <C-g> :Magit<cr>
 
 "
