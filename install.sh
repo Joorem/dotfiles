@@ -54,8 +54,8 @@ done
 #
 # Git submodules
 #
-${PRG_GIT} submodule init
-${PRG_GIT} submodule update
+${PRG_GIT} submodule --quiet init
+${PRG_GIT} submodule --quiet update
 
 #
 # MacOS
