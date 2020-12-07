@@ -9,6 +9,7 @@ set -u
 ETC_VIM_PLUG=~/.vim/autoload/plug.vim
 ETC_VIM_AIRLINE_GRUVBOX8=~/.vim/autoload/airline/themes/gruvbox8.vim
 OPT_CURL=(--create-dirs --location --silent --output)
+PRG_GIT=/usr/bin/git
 URL_VIM_PLUG='https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 URL_VIM_AIRLINE_GRUVBOX8='https://gist.githubusercontent.com/lifepillar/cc3236a47bbba0261283f43f73074932/raw/511af9c8b630a38da94b5c31b0058f0339b8ea7a/gruvbox8.vim'
 
@@ -50,6 +51,12 @@ for file in \
 
   ln -fs "$PWD/$file" "$HOME/$file"
 done
+
+#
+# Git submodules
+#
+${PRG_GIT} submodule init
+${PRG_GIT} submodule update
 
 #
 # MacOS
