@@ -35,7 +35,6 @@ for file in \
   .config/aria2c/* \
   .config/bat/* \
   .config/nord-dircolors \
-  .config/zplug \
   .config/starship \
   .config/tmux \
   .config/youtube-dl \
