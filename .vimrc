@@ -295,11 +295,17 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-git'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
 filetype plugin indent on
+
+"
+" Ale
+"
+let g:airline#extensions#ale#enabled = 1
+let g:ale_sh_shellcheck_options = '-x'
 
 "
 " Coc.vim
@@ -316,12 +322,6 @@ endfunction
 
 " use K to open documentation
 nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-"
-" Ale
-"
-let g:airline#extensions#ale#enabled = 1
-let g:ale_sh_shellcheck_options = '-x'
 
 "
 " colorizer (https://github/lilydjwg/colorizer)
@@ -376,16 +376,6 @@ let g:sonokai_disable_italic_comment = 1
 let g:sonokai_diagnostic_line_highlight = 1
 
 "
-" vim-airline (https://github.com/vim-airline/vim-airline)
-"
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#whitespace#enabled = 1
-let g:airline#extensions#whitespace#show_message = 1
-let g:airline_theme = 'sonokai'
-let g:airline_highlighting_cache = 1
-let g:airline_powerline_fonts = 1
-
-"
 " tagbar (https://github.com/majutsushi/tagbar)
 "
 map <leader>t :TagbarToggle<cr>
@@ -404,16 +394,26 @@ let g:undotree_DiffpanelHeight = 40
 let g:undotree_SetFocusWhenToggle = 1
 
 "
-" vimagit (https://github.com/jreybert/vimagit)
+" vim-airline (https://github.com/vim-airline/vim-airline)
 "
-let g:magit_auto_close = 1
-let g:airline#extensions#vimagit#enabled = 1
-map <C-g> :Magit<cr>
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#whitespace#show_message = 1
+let g:airline_theme = 'sonokai'
+let g:airline_highlighting_cache = 1
+let g:airline_powerline_fonts = 1
 
 "
 " vim-devicons (https://github.com/ryanoasis/vim-devicons)
 "
 let g:WebDevIconsOS = 'Darwin' " See https://github.com/ryanoasis/vim-devicons/pull/135
+
+"
+" vimagit (https://github.com/jreybert/vimagit)
+"
+let g:magit_auto_close = 1
+let g:airline#extensions#vimagit#enabled = 1
+map <C-g> :Magit<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
