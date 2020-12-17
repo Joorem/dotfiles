@@ -107,6 +107,7 @@ alias cat=bat
 alias df='df -h'
 alias dig=dig-color
 alias drill='drill-color'
+alias fzf="fzf --border --height 50% --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 alias grep="LC_ALL=C grep --color=always"
 alias l='lsd --long --human-readable --color always --size short'
 alias ll='l --all'
@@ -118,6 +119,7 @@ alias tad="transmission-remote --add"
 alias tol='transmission-list-torrent'
 alias tor='transmission-remove-torrent'
 alias vcurl='curl --silent --dump-header - -o /dev/null'
+alias v='vi $(fzf)'
 alias vi=vim
 alias view='vi -R'
 
