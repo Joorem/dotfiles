@@ -152,6 +152,7 @@ nnoremap <C-e> :e<cr>
 " Surround the current word with " or '
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+nnoremap <leader>br viw<esc>a`<esc>bi`<esc>lel
 
 " Fix indentation
 nnoremap <silent> <leader>m gg=G
