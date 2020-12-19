@@ -19,6 +19,7 @@ URL_VIM_AIRLINE_GRUVBOX8='https://gist.githubusercontent.com/lifepillar/cc3236a4
 mkdir -p \
   ~/.config/aria2c \
   ~/.config/bat \
+  ~/.config/coc \
   ~/.config/starship \
   ~/.gnupg \
   ~/.vim_runtime/temp_dirs/undodir \
