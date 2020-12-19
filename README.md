@@ -82,8 +82,12 @@ deleted or replaced on your system. Just run the following commands:
 ```sh
 git clone --quiet https://github.com/Joorem/dotfiles.git && \
 cd dotfiles && \
-docker build -t joorem-dotfiles . && \
-docker run -ti joorem-dotfiles zsh
+docker build -t joorem-dotfiles-tmp . && \
+id=$(docker run --rm --detach --interactive joorem-dotfiles-tmp zsh) && \
+docker export $id | docker import - joorem-dotfiles && \
+docker rm -f $id && \
+docker image rm joorem-dotfiles-tmp && \
+docker run --rm --interactive --tty joorem-dotfiles zsh
 ```
 
 ## install.sh
