@@ -74,9 +74,23 @@ Some of the plugins I currently use need externals programs to work correctly.
 
 # Installation
 
-If you want to test my configuration just run the following commands, it will
+## Docker
+
+The easiest way to play with my dotfiles is to use Docker: this way nothing is
+deleted or replaced on your system. Just run the following commands:
+
+```sh
+git clone --quiet https://github.com/Joorem/dotfiles.git && \
+cd dotfiles && \
+docker build -t joorem-dotfiles . && \
+docker run -ti joorem-dotfiles zsh
+```
+
+## install.sh
+
+If you want to test my configuration just run the following commands, they will
 create symbolic links between your `$HOME` directory and the needed files
-(.vimrc, etc.).
+(`.config`, `.vimrc`, etc.).
 
 :warning: DO NOT FORGET TO BACKUP YOUR EXISTING CONFIG FILES :warning:
 
