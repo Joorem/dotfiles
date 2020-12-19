@@ -23,3 +23,7 @@ disabled = false
 
 [nodejs]
 disabled = true
+
+[python]
+pyenv_version_name = false
+python_binary = "python3"
