@@ -6,13 +6,22 @@ help:
 
 .DEFAULT_GOAL := help
 
-build: ## Build docker image
+build: ## Docker: build docker image
 	@docker build --force-rm --pull --tag joorem-dotfiles .
 
-clean: ## Delete docker image
+clean: ## Docker: delete docker image
 	@docker image rm joorem-dotfiles
 
-run: ## Run docker image
+run: ## Docker: run docker image
 	@docker run --rm --interactive --tty joorem-dotfiles zsh
 
-docker: | build run ## Build and run docker image
+docker: | build run ## Docker: build and run docker image
+
+update: ## Update: Vim plugins, brew packages, Git submodules
+	@echo "Updating:"
+	@echo "  - Vim plugins"
+	@vim -E -s -u ~/.vimrc +PlugUpdate +qall; /bin/echo -n
+	@echo "  - brew packages"
+	@brew upgrade
+	@echo "  - git submodules"
+	@git submodule update --rebase
