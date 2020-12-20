@@ -80,9 +80,13 @@ The easiest way to play with my dotfiles is to use Docker: this way nothing is
 deleted or replaced on your system. Just run the following commands:
 
 ```sh
+# build and run the image
 git clone --quiet https://github.com/Joorem/dotfiles.git && \
 cd dotfiles && \
 make docker
+
+# delete the image
+make clean
 ```
 
 ## install.sh
