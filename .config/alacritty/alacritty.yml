@@ -2,17 +2,17 @@
 
 import:
   # colorschemes
-  # - /Users/jerome/.config/alacritty/colorschemes/ayu-mirage.yml
-  # - /Users/jerome/.config/alacritty/colorschemes/nord.yml
-  # - /Users/jerome/.config/alacritty/colorschemes/onedark.yml
-  - /Users/jerome/.config/alacritty/colorschemes/phaazon.yml
-  # - /Users/jerome/.config/alacritty/colorschemes/sonokai-andromeda.yml
+  # - ~/.config/alacritty/colorschemes/ayu-mirage.yml
+  # - ~/.config/alacritty/colorschemes/nord.yml
+  # - ~/.config/alacritty/colorschemes/onedark.yml
+  - ~/.config/alacritty/colorschemes/phaazon.yml
+  # - ~/.config/alacritty/colorschemes/sonokai-andromeda.yml
 
   # fonts
-  # - /Users/jerome/.config/alacritty/fonts/anonymice-nerd-font-mono.yml
-  # - /Users/jerome/.config/alacritty/fonts/firacode-nerd-font-mono.yml
-  # - /Users/jerome/.config/alacritty/fonts/hack-nerd-font-mono.yml
-  - /Users/jerome/.config/alacritty/fonts/jetbrains-nerd-font-mono.yml
+  # - ~/.config/alacritty/fonts/anonymice-nerd-font-mono.yml
+  # - ~/.config/alacritty/fonts/firacode-nerd-font-mono.yml
+  # - ~/.config/alacritty/fonts/hack-nerd-font-mono.yml
+  - ~/.config/alacritty/fonts/jetbrains-nerd-font-mono.yml
 
 env:
   TERM: xterm-256color
