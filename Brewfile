@@ -92,10 +92,13 @@ cask "qlstephen"
 cask "quicklook-json"
 cask "rectangle"
 cask "sequel-pro"
+cask "signal"
 cask "spotify"
 cask "sublime-text"
 cask "teamviewer"
+cask "tunnelblick"
 cask "visual-studio-code"
+cask "wireguard-tools"
 cask "wireshark"
 cask "whatsapp"
 
@@ -110,3 +113,4 @@ mas "Telegram", id: 747648890
 mas "The Unarchiver", id: 425424353
 mas "Tweetbot", id: 557168941
 mas "Wipr", id: 1320666476
+mas "WireGuard", id: 1451685025
