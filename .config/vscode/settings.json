@@ -1,0 +1,16 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "workbench.colorTheme": "Sonokai Andromeda",
+    "workbench.tree.indent": 32,
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+    "editor.fontLigatures": null,
+    "workbench.tips.enabled": false,
+    "workbench.tree.renderIndentGuides": "none",
+    "window.restoreFullscreen": true,
+    "terminal.explorerKind": "external",
+    "terminal.external.osxExec": "Alacritty.app",
+    "keyboard.touchbar.enabled": false,
+    "update.mode": "none"
+}
