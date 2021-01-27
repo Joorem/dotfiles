@@ -23,5 +23,6 @@ update: ## Update: Vim plugins, brew packages, Git submodules
 	@vim -E -s -u ~/.vimrc +PlugUpdate +qall; /bin/echo -n
 	@echo "  - brew packages"
 	@brew upgrade
+	@brew cleanup
 	@echo "  - git submodules"
 	@git submodule update --rebase
